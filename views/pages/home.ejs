@@ -13,25 +13,14 @@
     <%- include('./../components/navbar.ejs') %>
 
     <!-- content -->
-    <h1>Home</h1>
     <section class="slider">
         <div class="slider_content" id="slider">
             <div class="list">
-                <div class="item">
-                    <img src="/assets/slider_1.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="/assets/slider_2.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="/assets/slider_3.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="/assets/slider_4.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="/assets/slider_5.jpg" alt="">
-                </div>
+                <% homeImgs.forEach(homeImg => { %>
+                    <div class="item">
+                        <img src="/assets/<%= homeImg.img %>" alt="">
+                    </div>
+                <% }) %>
             </div>
             <div class="buttons">
                 <button id="prev"> < </button>
@@ -49,6 +38,8 @@
 
     <!-- footer -->
     <%- include('./../components/footer.ejs') %>
+
+    <!-- home script -->
     <script src="/js/home-script.js"></script>
 
 </body>

@@ -17,14 +17,14 @@
 .Intro-text h1{
     font-size: 7rem;
     font-weight: 700;
-    color: white;
+    color: var(--white-theme);
     margin: 10px 0 20px;
     line-height: 1;
 }
 
 .gallery-title h1{
     font-size: 7rem;
-    color: black;
+    color: var(--black-theme);
     font-weight: 600;
     display: flex;
     justify-content: center;
