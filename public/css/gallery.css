@@ -1,1 +1,97 @@
 @import './root.css';
+
+
+.Intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../assets/course2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Intro-text h1{
+    font-size: 7rem;
+    font-weight: 700;
+    color: white;
+    margin: 10px 0 20px;
+    line-height: 1;
+}
+
+.gallery-title h1{
+    font-size: 7rem;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 4px;
+    
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+.column{
+    flex:25%;
+    max-width: 30%;
+    padding:0 4px;
+}
+
+.column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 10px;
+}
+
+
+/* responsive layout */
+@media screen and (max-width:800px) {
+    
+    .Intro{
+        height: 70vh;
+    }
+
+    .Intro-text h1{
+        font-size: 5rem;
+    }
+
+    .gallery-title h1{
+        font-size: 5rem;
+    }
+
+    .column{
+        flex:50%;
+        max-width:50%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    .Intro{
+        height: 40vh;
+    }
+
+    .Intro-text h1{
+        font-size: 2.5rem;
+    }
+
+    .gallery-title h1{
+        font-size: 2.5rem;
+    }
+    
+    .column{
+        flex:100%;
+        max-width:100%;
+    }
+}
