@@ -29,69 +29,183 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 5% 4px;
-    
+    padding-top: 3% ;
 }
 
-.row{
-    display:flex;
-    flex-wrap: wrap;
+.gallery-title p{
+    font-size: 3rem;
+    color: var(--black-theme);
+    font-weight: 600;
+    display: flex;
     justify-content: center;
-    padding: 0 4px;
+    flex-wrap: wrap;
 }
 
-.column{
-    flex:25%;
-    max-width: 30%;
-    padding:0 4px;
-}
-
-.column img{
-    margin-top: 8px;
-    vertical-align: middle;
-    width:100%;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-    border-radius: 10px;
+.gallery-title p:hover{
+    cursor: pointer;
+    color: var(--green-theme);
+    transition: ease-in-out 0.5s;
 }
 
 
-/* responsive layout */
-@media screen and (max-width:800px) {
-    
-    .Intro{
-        height: 70vh;
-    }
-
-    .Intro-text h1{
-        font-size: 5rem;
-    }
-
-    .gallery-title h1{
-        font-size: 5rem;
-    }
-
-    .column{
-        flex:50%;
-        max-width:50%;
-    }
+.gal-container {
+    width: 100%;
+    margin: 2rem auto;
 }
 
-@media screen and (max-width:600px) {
-    
-    .Intro{
-        height: 40vh;
-    }
+.gal-1,
+.gal-2 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+    padding: 2%;
+}
 
-    .Intro-text h1{
-        font-size: 2.5rem;
-    }
+.gal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
-    .gallery-title h1{
-        font-size: 2.5rem;
-    }
-    
-    .column{
-        flex:100%;
-        max-width:100%;
-    }
+.gal-img:hover{
+    cursor: pointer;
+    transition: ease-in-out .5s;
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* gallery 1-6 */
+.gal-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gal-item-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gal-item-3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.gal-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gal-item-5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+.gal-item-6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+/* gallery 7-12 */
+.gal-item-7 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.gal-item-8 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gal-item-9 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.gal-item-10 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gal-item-11 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+.gal-item-12 {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+/* cta call to action */
+
+.cta {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../assets/Thai-4.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.cta-content h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--white-theme);
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-theme);
+    margin-bottom: 35px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 11px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--green-theme);
+    color: var(--white-theme);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all .6s ease;
+}
+
+.cta-btn:hover {
+    cursor: pointer;
+    background: var(--white-theme);
+    color: var(--green-theme);
 }
