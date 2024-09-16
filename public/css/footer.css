@@ -41,7 +41,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: var(--red-pastel-theme);
+	background-color: var(--green-theme);
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
@@ -90,6 +90,11 @@ ul{
 @media(max-width: 574px){
   	.footer-col{
     	width: 100%;
+	}
+	
+	.social-links {
+		display: flex;
+		justify-content: center;
 	}
 }
 

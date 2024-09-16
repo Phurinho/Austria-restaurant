@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../assets/course2.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../assets/background/course2.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -172,7 +172,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../assets/Thai-4.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../assets/gallery/Thai-4.jpg);
     background-size: cover;
     background-position: center;
 
@@ -208,4 +208,46 @@
     cursor: pointer;
     background: var(--white-theme);
     color: var(--green-theme);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: .5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.gal-1, .gal-2 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@media screen and (max-width: 768px) {
+    .Intro-text h1 {
+        font-size: 4rem;
+    }
+
+    .gallery-title h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .gallery-title p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .cta-content h2 {
+        font-size: 3.5rem;
+    }
+
+    .cta-content p {
+        margin: 20px 10px;
+    }
 }

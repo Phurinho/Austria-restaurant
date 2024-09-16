@@ -13,7 +13,36 @@
     <%- include('./../components/navbar') %>
 
     <!-- content -->
-    <h1>Menu</h1>
+    <div class="into">
+        <h1>Menu</h1>
+    </div>
+
+    <article>
+        <!-- category -->
+        <!-- <section class="category-container">
+            <ul>
+                <li><button>Soup</button></li>
+                <li><button>Soup</button></li>
+                <li><button>Soup</button></li>
+                <li><button>Soup</button></li>
+                <li><button>Soup</button></li>
+            </ul>
+        </section> -->
+
+        <!-- menu -->
+         <section class="menu">
+            <% menuImgs.forEach(menu => { %>
+                <div class="menu-container">
+                    <img src="/assets/<%= menu.img %>" alt="Food">
+                    <div class="menu-content">
+                        <p><%= menu.name %></p>
+                        <p>$<%= menu.price %></p>
+                        <button>Add</button>
+                    </div>
+                </div>
+            <% }) %>
+         </section>
+    </article>
 
     <!-- footer -->
     <%- include('./../components/footer') %>

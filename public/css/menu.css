@@ -1,1 +1,133 @@
 @import './root.css';
+
+.into {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .6)), url('./../assets/background/hero01.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.into h1 {
+    color: var(--white-theme);
+    font-size: 7rem;
+}
+
+.category-container {
+    margin: 0 2.5rem;
+}
+
+.category-container ul {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* overflow: scroll; */
+}
+
+.category-container button {
+    margin: 0 3rem;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.category-container button::before {
+    transition: .3s;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--green-theme);
+    border-radius: 20px;
+}
+
+.category-container button:focus::before {
+    width: 100%;
+}
+
+.category-container button:focus {
+    color: var(--green-theme);
+}
+
+.menu {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.menu-container {
+    width: 100%;
+    justify-self: center;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.menu-container img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu-content p:nth-child(1) {
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+
+.menu-content p:nth-child(2) {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.menu-content button {
+    transition: .3s ease-in-out;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+    border: 2px solid var(--green-theme);
+    color: var(--green-theme);
+    background: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.menu-content button:hover {
+    background-color: var(--green-theme);
+    color: var(--white-theme);
+}
+
+@media screen and (max-width: 768px) {
+    .into h1 {
+        font-size: 4rem;
+    }
+
+    .category-container {
+        margin: 0 20px;
+    }
+
+    .category-container button {
+        margin: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        margin: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

@@ -9,97 +9,56 @@
 </head>
 <body>
 
-    <!-- navbar -->
-    <%- include('./../components/navbar') %>
+  <!-- navbar -->
+  <%- include('./../components/navbar') %>
 
-   
-     <!-- Intro -->
-     <section class="Intro">
-
-        <div class="Intro" >
-           <div class="Intro-text">
-            <h1>Charm Resturant</h1>
-           </div>
-            
-        </div>
-    </section>
-   
-    <!-- Gallery -->
-     <section class="gallery">
-        <div class="gallery-title">
-            <h1>Welcome to Thailand</h1>
-            <p>Amazing Foods & Culture </p>
-        </div>
+    <!-- Intro -->
+  <section class="Intro">
+    <div class="Intro" >
+      <div class="Intro-text">
+        <h1>Charm Resturant</h1>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="gallery-title">
+      <h1>Welcome to Thailand</h1>
+      <p>Amazing Foods & Culture </p>
+    </div>
     <div class="gal-container"></div>
-        <div class="gal-1">
-            <!-- gallery 1-6 -->
-            <figure class="gal-item-1">
-              <img src="/assets/Thai-1.jpg" class="gal-img" alt="Image 1">
-            </figure>
-            
-            <figure class="gal-item-2">
-              <img src="/assets/Thai-2.jpg" class="gal-img" alt="Image 1">
-            </figure>
-            
-            <figure class="gal-item-3">
-              <img src="/assets/Thai-3.jpg" class="gal-img" alt="Image 1">
-            </figure>
-            
-            <figure class="gal-item-4">
-              <img src="/assets/Thai-4.jpg" class="gal-img" alt="Image 1">
-            </figure>
-            
-            <figure class="gal-item-5">
-              <img src="/assets/Thai-5.jpg" class="gal-img" alt="Image 1">
-            </figure>
-            
-            <figure class="gal-item-6">
-              <img src="/assets/Thai-6.jpg" class="gal-img" alt="Image 1">
-            </figure>
-    </div>
+      <div class="gal-1">
+        <!-- gallery 1-6 -->
+        <% galleryImgs_1.forEach(gallery => { %>
+          <figure class="<%= gallery.name %>">
+            <img src="/assets/<%= gallery.img %>" class="gal-img" alt="Image 1"> 
+          </figure>
+        <% }) %>
+      </div>
 
-    <div class="gal-2">
+      <div class="gal-2">
         <!-- gallery 7-12 -->
-            <figure class="gal-item-7">
-              <img src="/assets/Thai-7.jpg" class="gal-img" alt="Image 1">
-            </figure>
-            
-            <figure class="gal-item-8">
-              <img src="/assets/Thai-8.jpg" class="gal-img" alt="Image 1">
-            </figure>
-
-            <figure class="gal-item-9">
-              <img src="/assets/Thai-9.jpg" class="gal-img" alt="Image 1">
-            </figure>
-
-            <figure class="gal-item-10">
-              <img src="/assets/Thai-10.jpg" class="gal-img" alt="Image 1">
-            </figure>
-
-            <figure class="gal-item-11">
-              <img src="/assets/Thai-11.jpg" class="gal-img" alt="Image 1">
-            </figure>
-
-            <figure class="gal-item-12">
-              <img src="/assets/Thai-1.jpg" class="gal-img" alt="Image 1">
-            </figure> 
+        <% galleryImgs_2.forEach(gallery => { %>
+          <figure class="<%= gallery.name %>">
+            <img src="/assets/<%= gallery.img %>" class="gal-img" alt="Image 1">
+          </figure>
+        <% }) %>
+      </div>
     </div>
-</div>
+  </section>
 
-</section>
-
-
- <!-- cta -->
- <section class="cta">
+  <!-- cta -->
+  <section class="cta">
     <div class="cta-content">
-        <h2>Enjoy The Delicious Tatse</h2>
-        <p>when you're got health,you got everthing.</p>
-        <a href="/" class="cta-btn">BOOK NOW</a>
+      <h2>Enjoy The Delicious Tatse</h2>
+      <p>when you're got health,you got everthing.</p>
+      <a href="/" class="cta-btn">BOOK NOW</a>
     </div>
-</section>
+  </section>
 
-    <!-- footer -->
-    <%- include('./../components/footer') %>
+  <!-- footer -->
+  <%- include('./../components/footer') %>
 
 </body>
 </html>

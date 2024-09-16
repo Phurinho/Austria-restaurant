@@ -14,11 +14,13 @@ nav {
 nav h1 {
     color: var(--white-theme);
     font-family: var(--font-poppins);
+    text-shadow: 2px 2px 4px var(--black-theme);
 }
 
 nav .content-container {
     display: flex;
     align-items: center;
+    transition: .3s ease;
 }
 
 nav .content-container li {
@@ -26,11 +28,28 @@ nav .content-container li {
 }
 
 nav .content-container a {
+    position: relative;
+    transition: .3s ease;
     margin: 0 20px;
+    padding: 5px 0;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
     font-family: var(--font-poppins);
     color: var(--white-theme);
+    text-shadow: 2px 2px 4px var(--black-theme);
+}
+
+nav .content-container a::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    background-color: var(--green-theme);
+    box-shadow: 2px 2px 4px var(--black-theme);
+    border-radius: 20px;
+    transition: width .2s;
 }
 
 nav .nav-btn {
@@ -38,34 +57,63 @@ nav .nav-btn {
     background: none;
     display: none;
     flex-direction: column;
+    cursor: pointer;
 }
 
-.nav-btn .bar1, .nav-btn .bar2, .nav-btn .bar3 {
+.nav-btn .bar {
+    transition: .3s ease;
     width: 30px;
-    margin: 3px 0;
+    margin: 3px 10px;
     border: 2px solid var(--white-theme);
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px var(--black-theme);
+}
+
+nav .content-container a:hover::after {
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
     nav .content-container {
-        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: -10rem;
+        top: 10vh;
+    }
+
+    nav .content-container li {
+        margin: 20px 0;
     }
 
     nav .nav-btn {
         display: flex;
     }
 
-    .nav-btn:focus .bar1 {
-        transition: 300ms;
+    .nav-btn .bar:nth-child(1) {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    .nav-btn .bar:nth-child(2) {
+        opacity: 1;
+    }
+
+    .nav-btn .bar:nth-child(3) {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    .nav-btn.active .bar:nth-child(1) {
         transform: translate(0, 9px) rotate(45deg);
     }
 
-    .nav-btn:focus .bar2 {
+    .nav-btn.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .nav-btn:focus .bar3 {
-        transition: 300ms;
+    .nav-btn.active .bar:nth-child(3) {
         transform: translate(0, -9px) rotate(-45deg);
+    }
+
+    nav .content-container.active {
+        right: 0;
     }
 }
