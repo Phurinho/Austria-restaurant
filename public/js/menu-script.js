@@ -8,5 +8,5 @@ hnext.addEventListener('click', function(){
 
 hprev.addEventListener('click', function(){
     let hitems = document.querySelectorAll('.hotdeal-item')
-    document.querySelector('.slide').prepend(hitems[hitems.length - 1]) // here the length of items = 6
+    document.querySelector('.hotdeal-slide').prepend(hitems[hitems.length - 1]) // here the length of items = 6
 })
