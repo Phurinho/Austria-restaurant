@@ -1,46 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <!-- static head -->
     <%- include('./../components/head') %>
-    <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/home.css">
 
 </head>
+
 <body>
 
     <!-- navbar -->
     <%- include('./../components/navbar.ejs') %>
 
-    <!-- content -->
-    <section class="slider">
-        <div class="slider_content" id="slider">
-            <div class="list">
-                <% homeImgs.forEach(homeImg => { %>
-                    <div class="item">
-                        <img src="/assets/<%= homeImg.img %>" alt="">
+        <!-- content -->
+        <section class="slider">
+            <div class="slider_content" id="slider">
+                <div class="list">
+                    <% homeImgs.forEach(homeImg=> { %>
+                        <div class="item">
+                            <img src="/assets/<%= homeImg.img %>" alt="">
+                        </div>
+                        <% }) %>
+                </div>
+                <div class="buttons">
+                    <button id="prev">
+                        < </button>
+                            <button id="next"> > </button>
+                </div>
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- about section starts -->
+
+        <section class="about">
+            <div class="about-container">
+                <h1 class="heading"> <span>About </span>us</h1>
+
+                <div class="row">
+
+                    <div class="video-container">
+                        <video src="/assets/ThaiFoods-video.mp4" loop autoplay muted></video>
+                        <h3>Best foods in the world.</h3>
                     </div>
-                <% }) %>
-            </div>
-            <div class="buttons">
-                <button id="prev"> < </button>
-                <button id="next"> > </button>
-            </div>
-            <ul class="dots">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </section>
 
-    <!-- footer -->
-    <%- include('./../components/footer.ejs') %>
+                    <div class="content">
+                        <h3>why choose us?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis saepe eum repellendus earum
+                            sapiente ex aspernatur architecto non, dolorem inventore? Eaque placeat nulla dignissimos
+                            magnam cum veritatis ratione odio adipisci.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ut, obcaecati rerum pariatur
+                            minima omnis dignissimos asperiores doloremque deleniti itaque, tenetur impedit doloribus
+                            voluptatibus consequuntur harum cumque? Aliquam at dicta a, rem explicabo molestias qui
+                            impedit distinctio, minus nobis dolore possimus excepturi reprehenderit. Voluptas aut, optio
+                            explicabo incidunt ullam ea.</p>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
 
-    <!-- home script -->
-    <script src="/js/home-script.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section ends -->
+
+        <!-- icons section starts -->
+        <section class="icons-container">
+            <div class="icons">
+                <a href="#" class="fas fa-truck"></a>
+                <div class="info">
+                    <h3>free delivery</h3>
+                    <span>on all orders</span>
+                </div>
+            </div>
+
+            <div class="icons">
+                <a href="#"><i class="fas fa-sack-dollar"></i></a>
+                <div class="info">
+                    <h3>10 days returns</h3>
+                    <span>moneyback guarantee</span>
+                </div>
+            </div>
+
+            <div class="icons">
+                <a href="#"><i class="fas fa-gift"></i></a>
+                <div class="info">
+                    <h3>offer & gifts</h3>
+                    <span>on all orders</span>
+                </div>
+            </div>
+
+            <div class="icons">
+                <a href="#"><i class="fas fa-credit-card"></i></a>
+                <div class="info">
+                    <h3>secure payments</h3>
+                    <span>protected by PayPal</span>
+                </div>
+            </div>
+        </section>
+        <!-- icons section ends -->
+
+        
+        <!-- footer -->
+        <%- include('./../components/footer.ejs') %>
+
+
+            <!-- home script -->
+            <script src="/js/home-script.js"></script>
 
 </body>
+
 </html>
