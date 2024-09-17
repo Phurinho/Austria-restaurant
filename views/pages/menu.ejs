@@ -11,55 +11,21 @@
 
     <!-- navbar -->
     <%- include('./../components/navbar') %>
-    
+
     <article>
         <div class="hotdeal-container">
 
             <div class="hotdeal-slide">
     
-                
-                <div class="hotdeal-item" style="background-image: url('/assets/gallery/Thai-1.jpg');">
-                    <div class="hotdeal-content">
-                        <div class="hotdeal-name">Menu1</div>
-                        <div class="hotdeal-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        <button>See More</button>
+                <% hotdealImgs.forEach(hotdeal => { %>
+                    <div class="hotdeal-item" style="background-image: url('/assets/<%= hotdeal.img %>');">
+                        <div class="hotdeal-content">
+                            <div class="hotdeal-name"><%= hotdeal.name %></div>
+                            <div class="hotdeal-des"><%= hotdeal.detail %></div>
+                            <button>See More</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hotdeal-item" style="background-image: url(/assets/gallery/Thai-2.jpg);">
-                    <div class="hotdeal-content">
-                        <div class="hotdeal-name">Menu2</div>
-                        <div class="hotdeal-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="hotdeal-item" style="background-image: url(/assets/gallery/Thai-3.jpg);">
-                    <div class="hotdeal-content">
-                        <div class="hotdeal-name">Menu3</div>
-                        <div class="hotdeal-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="hotdeal-item" style="background-image: url(/assets/gallery/Thai-4.jpg);">
-                    <div class="hotdeal-content">
-                        <div class="hotdeal-name">Menu4</div>
-                        <div class="hotdeal-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="hotdeal-item" style="background-image: url(/assets/gallery/Thai-5.jpg);">
-                    <div class="hotdeal-content">
-                        <div class="hotdeal-name">Menu5</div>
-                        <div class="hotdeal-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="hotdeal-item" style="background-image: url(/assets/gallery/Thai-6.jpg);">
-                    <div class="hotdeal-content">
-                        <div class="hotdeal-name">Ireland</div>
-                        <div class="hotdeal-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        <button>See More</button>
-                    </div>
-                </div>
+                <% }) %>
     
             </div>  
     

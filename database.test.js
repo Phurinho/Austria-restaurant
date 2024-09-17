@@ -96,4 +96,37 @@ exports.menuImgs = [
         name: "Cream Brule",
         price: "0.99",
     },
-]
+];
+
+exports.hotdealImgs = [
+    {
+        img: "gallery/Thai-1.jpg",
+        name: "Menu1",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+        img: "gallery/Thai-2.jpg",
+        name: "Menu2",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+        img: "gallery/Thai-3.jpg",
+        name: "Menu3",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+        img: "gallery/Thai-4.jpg",
+        name: "Menu4",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+        img: "gallery/Thai-5.jpg",
+        name: "Menu5",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+        img: "gallery/Thai-6.jpg",
+        name: "Ireland",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+];

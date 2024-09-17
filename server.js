@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const server = express();
 
-const { homeImgs, galleryImgs_1, galleryImgs_2, menuImgs } = require('./database.test');
+const { homeImgs, galleryImgs_1, galleryImgs_2, menuImgs, hotdealImgs } = require('./database.test');
 
 server.set("view engine", "ejs");
 
@@ -19,7 +19,7 @@ server.get('/gallery', (req, res) => {
 });
 
 server.get('/menu', (req, res) => {
-    res.render('pages/menu', { menuImgs });
+    res.render('pages/menu', { menuImgs, hotdealImgs });
 });
 
 const PORT = 5000 || 5001;
