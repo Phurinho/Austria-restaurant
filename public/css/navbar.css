@@ -4,13 +4,19 @@ nav {
     width: 100%;
     position: fixed;
     background: none;
+ 
+    
     padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    background-color:rgba(255,255,255,0.02);
 }
-
+nav:hover{
+    background-color: rgb(0, 0, 0);
+    transition: 1s ease;
+}
 nav h1 {
     color: var(--white-theme);
     font-family: var(--font-poppins);
@@ -21,6 +27,7 @@ nav .content-container {
     display: flex;
     align-items: center;
     transition: .3s ease;
+    
 }
 
 nav .content-container li {
