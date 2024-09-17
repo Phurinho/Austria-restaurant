@@ -1,3 +1,5 @@
+// slider effect
+
 let slider = document.querySelector('.slider_content .list');
 let items = document.querySelectorAll('.slider_content .list .item');
 let next = document.getElementById('next');
@@ -34,3 +36,5 @@ dots.forEach((li, key) => {
          reloadSlider();
     })
 })
+
+

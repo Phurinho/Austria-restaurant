@@ -1,5 +1,8 @@
 @import './root.css';
 
+html{
+    scroll-behavior: smooth;
+}
 
 .Intro {
     position: relative;
