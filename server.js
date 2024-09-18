@@ -5,6 +5,7 @@ const server = express();
 const { homeImgs, galleryImgs_1, galleryImgs_2, menuImgs, hotdealImgs } = require('./database.test');
 
 server.set("view engine", "ejs");
+server.set("views", path.join(__dirname, "views"));
 
 server.use(express.json());
 server.use(express.static(path.join(__dirname, "public")));
