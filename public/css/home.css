@@ -299,6 +299,9 @@
     .heading {
       font-size: 3rem;
     }
+    .about .row .content {
+      flex: 1 1 20rem;
+    }
     .about .row .content h3 {
       font-size: 1.5rem;
     }
@@ -307,6 +310,9 @@
     }
     .btn {
       padding: 0.7rem 3rem;
+    }
+    .gal-img{
+      border-radius: 0px;
     }
   }
   
@@ -331,5 +337,8 @@
     .icons-container .icons {
       flex: 1 1 100%;
       margin-bottom: 0.5rem;
+    }
+    .gal-img{
+      border-radius: 0px;
     }
   }
