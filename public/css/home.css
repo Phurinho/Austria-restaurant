@@ -116,22 +116,22 @@
     padding-bottom: 3rem;
 }
 
-.about .row .video-container {
+.about .row .poster-container {
     flex: 1 1 40rem;
     position: relative;
 }
 
-.about .row .video-container video {
+.about .row .poster-container img {
     width: 100%;
     border: 1.5rem solid #fff;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     height: 100%;
     object-fit: cover;
 
 }
 
-.about .row .video-container h3 {
+.about .row .poster-container h3 {
     position: absolute;
     top: 50%;
     transition: translateY(-50%);
