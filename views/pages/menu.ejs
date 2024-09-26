@@ -48,18 +48,93 @@
         </section> -->
 
         <!-- menu -->
-         <section class="menu">
-            <% menuImgs.forEach(menu => { %>
-                <div class="menu-container">
-                    <img src="/assets/<%= menu.img %>" alt="Food">
-                    <div class="menu-content">
-                        <p><%= menu.name %></p>
-                        <p>$<%= menu.price %></p>
-                        <button>Add</button>
-                    </div>
+        <!-- <section class="menu">
+        <% menuImgs.forEach(menu => { %>
+            <div class="menu-container">
+                <img src="/assets/<%= menu.img %>" alt="Food">
+                <div class="menu-content">
+                    <p><%= menu.name %></p>
+                    <p>$<%= menu.price %></p>
+                    <button>Add</button>
                 </div>
-            <% }) %>
-         </section>
+            </div>
+        <% }) %>
+        </section> -->
+
+        <section class="menu">
+            <div class="menu-container">
+                <h1>Northern</h1>
+                <div class="food-container">
+                    <% menuImgs.forEach(menu => { %>
+                        <div class="food">
+                            <img src="/assets/<%= menu.img %>" alt="Food">
+                            <div class="food-content">
+                                <p><%= menu.name %></p>
+                                <p>$<%= menu.price %></p>
+                                <!-- <button>Add</button> -->
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <h1>Central</h1>
+                <div class="food-container">
+                    <% menuImgs.forEach(menu => { %>
+                        <div class="food">
+                            <img src="/assets/<%= menu.img %>" alt="Food">
+                            <div class="food-content">
+                                <p><%= menu.name %></p>
+                                <p>$<%= menu.price %></p>
+                                <!-- <button>Add</button> -->
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <h1>Northeast</h1>
+                <div class="food-container">
+                    <% menuImgs.forEach(menu => { %>
+                        <div class="food">
+                            <img src="/assets/<%= menu.img %>" alt="Food">
+                            <div class="food-content">
+                                <p><%= menu.name %></p>
+                                <p>$<%= menu.price %></p>
+                                <!-- <button>Add</button> -->
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <h1>South</h1>
+                <div class="food-container">
+                    <% menuImgs.forEach(menu => { %>
+                        <div class="food">
+                            <img src="/assets/<%= menu.img %>" alt="Food">
+                            <div class="food-content">
+                                <p><%= menu.name %></p>
+                                <p>$<%= menu.price %></p>
+                                <!-- <button>Add</button> -->
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>        
+                <h1>Austria</h1>
+                <div class="food-container">
+                    <% menuImgs.forEach(menu => { %>
+                        <div class="food">
+                            <img src="/assets/<%= menu.img %>" alt="Food">
+                            <div class="food-content">
+                                <p><%= menu.name %></p>
+                                <p>$<%= menu.price %></p>
+                                <!-- <button>Add</button> -->
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>        
+            </div>
+        </section>
+
+        <section class="menu-paper">
+            <img src="/assets/menu_paper.jpeg" alt="">
+        </section>
+
     </article>
 
     <!-- footer -->
