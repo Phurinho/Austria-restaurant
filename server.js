@@ -23,6 +23,10 @@ server.get('/menu', (req, res) => {
     res.render('pages/menu', { menuImgs, hotdealImgs });
 });
 
+server.get('/booking', (req, res) => {
+    res.render('pages/booking');
+});
+
 const PORT = 5000 || 5001;
 
 server.listen(PORT, () => {
