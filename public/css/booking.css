@@ -34,6 +34,7 @@
     background: var(--white-theme);
     border: none;
     border-radius: 10px;
+    width: 250px;
 }
 
 iframe {
@@ -127,3 +128,25 @@ button[type="submit"]:hover {
         grid-template-columns: 1fr 1fr ;
     }
 }
+
+@media (max-width: 480px){
+    .pdf-container, .order-container {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust the height */
+    }
+
+    .pdf-container embed {
+        height: 500px; /* Set a specific height for small screens */
+    }
+    .title{
+        top: 20%;
+    }
+    .textfield-container{
+        margin-bottom: 50px;
+        justify-items: center;
+    }
+    .textfield-container{
+        grid-template-columns: 1fr ;
+    }
+}
+
