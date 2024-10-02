@@ -130,6 +130,11 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 480px){
+    
+    .flex-container{
+        margin-bottom: 50px;
+    }
+    
     .pdf-container, .order-container {
         flex: 1 1 100%; /* Full width on smaller screens */
         height: auto; /* Adjust the height */

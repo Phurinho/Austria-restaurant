@@ -230,6 +230,11 @@ html{
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
+@media screen and (max-width: 1024px){
+    .gallery-title h1{
+        font-size: 4rem;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .Intro-text h1 {
