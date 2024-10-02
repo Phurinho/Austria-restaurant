@@ -169,16 +169,6 @@ button[type="submit"]:hover {
         top: 55%
     }
 
-    .title {
-        top: 16%;
-        font-size: 3rem;
-    }
-
-    .textfield-container {
-        margin-top: 40%;
-        margin-bottom: 3%;
-    }
-
     .order-container,
     .pdf-container {
         width: 100%; /* Full width */
