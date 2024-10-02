@@ -11,27 +11,23 @@
     <section class="title-booking">
         <h1 class="title">Booking</h1>
         <div class="textfield-container">
-            <input type="text" placeholder="Name">
-            <input type="date" placeholder="Date">
-            <input type="number" placeholder="Count">
+            <input type="text" placeholder="Name" required>
+            <input type="date" placeholder="Date" required>
+            <input type="number" placeholder="Count" min="1" required>
             <input type="text" placeholder="Allergy">
         </div>
-        <iframe src="https://calendar.google.com/calendar/embed?src=watcharapong16599%40gmail.com&ctz=Asia%2FBangkok"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=watcharapong16599%40gmail.com&ctz=Asia%2FBangkok" class="calendar"></iframe>
     </section>
 
     <section class="flex-container">
         <div class="pdf-container">
-            <h1>Menu PDF</h1>
-            <iframe 
-                src="https://docs.google.com/gview?url=https://austria-restaurant-plansfood.vercel.app/booking/assets/menu/menu_paper.pdf&embedded=true" 
-                style="width: 100%; height: 600px;" 
-                frameborder="0">
-            </iframe>
-            <p>Your browser does not support PDFs. <a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
+            <h1>Menu</h1>
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRPcU8dY0HGgVckl-hWiH1zqhktlHEpxnTFYHu3URdzQRLoijDrvyQPD-YblNN4VC_P6QFJVWf7AilH/pub?embedded=true" class="pdf-iframe"></iframe>
+            <p>Your browser does not support displaying PDFs. <a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
         </div>
         <div class="order-container">
             <h1>Order Details</h1>
-            <textarea placeholder="Enter your order details here..."></textarea>
+            <textarea placeholder="Enter your order details here..." required></textarea>
             <button type="submit">Submit</button>
         </div>
     </section>

@@ -1,11 +1,9 @@
 @import './root.css';
 
-/* การตั้งค่ารูปภาพพื้นหลังและการจัดตำแหน่งในส่วนหัวเรื่อง Booking */
 .title-booking {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
     background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,84 +13,85 @@
 }
 
 .title {
-    font-size: 6rem;
+    font-size: 7rem;
     color: var(--white-theme);
+    z-index: 2;
     margin-bottom: 20px;
 }
 
-/* การจัดวางฟิลด์ข้อความในฟอร์มให้มีระยะห่างที่เหมาะสม */
 .textfield-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 0 20px;
+    gap: 20px;
 }
 
 .textfield-container input {
     padding: 10px;
     height: 40px;
     background: var(--white-theme);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 250px;
-    transition: all 0.3s ease;
-}
-
-.textfield-container input:focus {
-    border-color: #28a745;
-    outline: none;
-}
-
-iframe {
+    border: none;
     border-radius: 10px;
-    width: 80%;
-    height: 350px;
-    margin-top: 20px;
+    width: 200px;
 }
 
-/* การจัดการ Layout ของฟอร์มและการแสดง PDF */
+.calendar {
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 80%;
+    height: 300px;
+}
+
 .flex-container {
     display: flex;
-    flex-direction: row; /* แบ่งแนวนอน */
     justify-content: space-between;
     gap: 20px;
-    padding: 2%;
-    min-height: calc(100vh - 100px); /* หักค่าเฮดเดอร์ */
+    width: 100%;
+    height: auto;
+    padding: 20px;
 }
 
 .order-container,
 .pdf-container {
-    flex: 1; /* ให้ทั้งสองช่องมีขนาดเท่ากัน */
+    flex: 1 1 48%;
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
 }
 
-.pdf-container h1,
-.order-container h1 {
-    font-size: 22px;
+.pdf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    justify-content: center; /* จัดให้มีช่องว่างเท่าๆ กัน */
+}
+
+.pdf-iframe {
+    border: none;
+    width: 90%; /* ปรับขนาดให้เล็กลงเพื่อให้อยู่ตรงกลาง */
+    height: 400px;
+    border-radius: 8px;
+}
+
+
+.order-container h1,
+.pdf-container h1 {
+    font-size: 24px;
     margin-bottom: 15px;
 }
 
 textarea {
     flex: 1;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     resize: none;
-    transition: all 0.3s ease;
-}
-
-textarea:focus {
-    border-color: #28a745;
-    outline: none;
 }
 
 button[type="submit"] {
@@ -111,59 +110,9 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
-.pdf-container embed {
-    width: 100%;
-    height: 400px; /* ขนาดกำหนด */
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-/* สำหรับหน้าจอขนาดกลาง */
-@media screen and (max-width: 1024px) {
-    .title {
-        font-size: 5rem;
-    }
-
-    .textfield-container {
-        width: 90%;
-    }
-
-    .flex-container {
-        flex-direction: column; /* เปลี่ยนเป็นแนวตั้งสำหรับหน้าจอเล็ก */
-        gap: 20px;
-    }
-
-    .order-container,
-    .pdf-container {
-        height: auto;
-    }
-}
-
-/* สำหรับหน้าจอขนาดเล็ก */
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 4rem;
-    }
-
-    .textfield-container {
-        width: 100%;
-    }
-
-    .flex-container {
-        height: auto; /* ใช้ขนาดอัตโนมัติ */
-    }
-
-    .order-container,
-    .pdf-container {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* สำหรับหน้าจอขนาดเล็กมาก (มือถือ) */
-@media screen and (max-width: 480px) {
-    .title {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .textfield-container input {
@@ -171,10 +120,17 @@ button[type="submit"]:hover {
     }
 
     .flex-container {
-        flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+        flex-direction: column; /* เปลี่ยนเป็นแนวตั้งในหน้าจอเล็ก */
     }
 
-    .pdf-container embed {
-        height: 300px; /* ความสูงของ PDF สำหรับหน้าจอเล็ก */
+    .order-container,
+    .pdf-container {
+        width: 100%; /* ปรับให้เต็มความกว้าง */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 4rem;
     }
 }
