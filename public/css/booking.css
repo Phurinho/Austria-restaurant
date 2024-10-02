@@ -6,82 +6,84 @@
     background-size: cover;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: column;
+    padding: 20px; /* เพิ่ม padding */
 }
 
 .title {
+    position: absolute;
+    top: 5%;
     font-size: 7rem;
     color: var(--white-theme);
     z-index: 2;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .textfield-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     gap: 20px;
+    margin-top: 80px; /* เพิ่มระยะห่างจาก Booking */
 }
 
 .textfield-container input {
-    padding: 10px;
+    padding: 0 10px;
     height: 40px;
     background: var(--white-theme);
     border: none;
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
 }
 
 .calendar {
-    border: none;
-    border-radius: 10px;
     margin-top: 20px;
+    border: none; /* Remove iframe border */
     width: 80%;
-    height: 300px;
+    height: 300px; /* Set a fixed height */
 }
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-    height: auto;
-    padding: 20px;
+    padding: 2%;
 }
 
 .order-container,
 .pdf-container {
-    flex: 1 1 48%;
+    flex: 1 1 48%; /* Use flex-basis to control width */
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center items */
+    min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
 }
 
-.pdf-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
-    justify-content: center; /* จัดให้มีช่องว่างเท่าๆ กัน */
-}
-
-.pdf-iframe {
-    border: none;
-    width: 90%; /* ปรับขนาดให้เล็กลงเพื่อให้อยู่ตรงกลาง */
-    height: 400px;
+.menu-image {
+    width: 90%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
+    margin-top: 10px;
 }
 
-
-.order-container h1,
 .pdf-container h1 {
+    margin-bottom: 15px;
+    text-align: center; /* Center title */
+}
+
+.order-container h1 {
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center; /* Center title */
 }
 
 textarea {
@@ -92,6 +94,7 @@ textarea {
     border-radius: 10px;
     font-size: 16px;
     resize: none;
+    overflow: auto;
 }
 
 button[type="submit"] {
@@ -110,27 +113,61 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
-@media screen and (max-width: 768px) {
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
     .title {
+        top: 5%;
         font-size: 5rem;
     }
 
-    .textfield-container input {
-        width: 100%;
+    .textfield-container {
+        width: 80%;
     }
 
     .flex-container {
-        flex-direction: column; /* เปลี่ยนเป็นแนวตั้งในหน้าจอเล็ก */
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 20px;
+        align-items: center;
     }
 
     .order-container,
     .pdf-container {
-        width: 100%; /* ปรับให้เต็มความกว้าง */
+        height: auto; /* Auto height */
+        min-width: 300px; /* เพิ่มความกว้างขั้นต่ำ */
+        width: 90%; /* กำหนดความกว้าง */
+        min-height: 500px; /* เพิ่มความสูงขั้นต่ำ */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        top: 15%;
+        font-size: 4rem;
+    }
+
+    .flex-container {
+        height: auto; /* Auto height */
+    }
+
+    .menu-image {
+        height: 500px; /* Set height for mobile */
     }
 }
 
 @media screen and (max-width: 480px) {
     .title {
-        font-size: 4rem;
+        top: 10%;
+        font-size: 3rem;
+    }
+
+    .textfield-container {
+        margin-bottom: 30%;
+    }
+
+    .order-container,
+    .pdf-container {
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+        min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
     }
 }
