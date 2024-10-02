@@ -5,7 +5,7 @@
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
     background-size: cover;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,24 +13,23 @@
 
 .title {
     position: absolute;
-    top: 25%;
-    font-size: 4rem;
+    top: 20%;
+    font-size: 7rem;
     color: var(--white-theme);
     z-index: 2;
 }
 
 .textfield-container {
-    width: 80%;
-    position: absolute;
-    display: grid;
-    justify-self: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
     gap: 20px;
-}   
+}
 
 .textfield-container input {
     padding: 0 10px;
-    height: 30px;
+    height: 40px;
     background: var(--white-theme);
     border: none;
     border-radius: 10px;
@@ -53,14 +52,16 @@ iframe {
     gap: 20px;
     width: 100%;
     height: 100vh;
-    padding:2%; 
-   
+    padding: 2%;
+
+
 }
 
-.pdf-container, .order-container {
-    flex: 1 1 48%; 
+.pdf-container,
+.order-container {
+    flex: 1 1 48%;
     background-color: #fff;
-    padding: 15px; 
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     height: 100%;
@@ -87,14 +88,14 @@ iframe {
 }
 
 textarea {
-    flex: 1; 
+    flex: 1;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 16px;
-    resize: none; 
-    overflow: auto; 
+    resize: none;
+    overflow: auto;
 }
 
 button[type="submit"] {
@@ -113,45 +114,106 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
+@media screen and (max-width: 1024px) {
 
-@media (max-width: 768px) {
-    .pdf-container, .order-container {
-        flex: 1 1 100%; /* Full width on smaller screens */
-        height: auto; /* Adjust the height */
+    .title h1 {
+        top: 30%;
+        font-size: 7rem;
     }
 
-    .pdf-container embed {
-        height: 500px; /* Set a specific height for small screens */
+    .textfield-container {
+        width: 77%;
+
     }
 
-    .textfield-container{
-        grid-template-columns: 1fr 1fr ;
+    .flex-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .pdf-container,
+    .order-container {
+        height: 70%;
+    }
+
+}
+
+@media screen and (max-width: 810px) {
+    .flex-container {
+        padding: 1%;
+    }
+
+    .pdf-container,
+    .order-container {
+        height: 55%;
     }
 }
 
-@media (max-width: 480px){
-    
-    .flex-container{
-        margin-bottom: 50px;
+@media screen and (max-width: 768px) {
+
+    .title {
+        top: 15%;
+        font-size: 6rem;
     }
-    
-    .pdf-container, .order-container {
-        flex: 1 1 100%; /* Full width on smaller screens */
-        height: auto; /* Adjust the height */
+
+    .textfield-container {
+
+        width: 100%;
+    }
+
+    .flex-container {
+        height: 100%;
+    }
+
+    .pdf-container,
+    .order-container {
+        flex: 1 1 100%;
+        /* Full width on smaller screens */
+        height: 80%;
+        /* Adjust the height */
     }
 
     .pdf-container embed {
-        height: 500px; /* Set a specific height for small screens */
+        height: 500px;
+        /* Set a specific height for small screens */
     }
-    .title{
-        top: 20%;
+
+    .order-container {
+        height: 300px;
     }
-    .textfield-container{
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .title {
+        top: 10%;
+        font-size: 4rem;
+    }
+
+    .flex-container {
         margin-bottom: 50px;
+    }
+
+    .pdf-container,
+    .order-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .pdf-container embed {
+        height: 300px;
+    }
+
+    .order-container{
+        height: 300px;
+    }
+
+    .textfield-container {
+        margin-bottom: 30%;
         justify-items: center;
     }
-    .textfield-container{
-        grid-template-columns: 1fr ;
-    }
-}
 
+}
