@@ -14,7 +14,7 @@
 
 .title {
     position: absolute;
-    top: 5%;
+    top: 10%;
     font-size: 7rem;
     color: var(--white-theme);
     z-index: 2;
@@ -158,12 +158,16 @@ button[type="submit"]:hover {
 
 @media screen and (max-width: 480px) {
     .title {
-        top: 10%;
+        top: 14%;
         font-size: 3rem;
     }
 
     .textfield-container {
-        margin-bottom: 10%;
+        margin-top: 32%;
+        margin-bottom: 3%;
+    }
+    .calendar{
+        
     }
 
     .order-container,
