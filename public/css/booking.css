@@ -1,5 +1,6 @@
 @import './root.css';
 
+
 .title-booking {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
@@ -44,31 +45,85 @@ iframe {
     z-index: 3;
 }
 
-.menu-container {
-    margin: 30px 0;
+.flex-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    padding:2%; 
+   
 }
 
-.pdf-menu {
-
-}
-
-.pdf-menu img {
-    width: 500px;
-}
-
-.order-field {
+.pdf-container, .order-container {
+    flex: 1 1 48%; 
+    background-color: #fff;
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.order-field textarea {
-    width: 500px;
-    height: 658px;
-    font-size: 1rem;
+.pdf-container embed {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.order-container h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    flex: 1; 
+    width: 100%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none; 
+    overflow: auto; 
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+@media (max-width: 768px) {
+    .pdf-container, .order-container {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust the height */
+    }
+
+    .pdf-container embed {
+        height: 500px; /* Set a specific height for small screens */
+    }
+
+    .textfield-container{
+        grid-template-columns: 1fr 1fr ;
+    }
 }
