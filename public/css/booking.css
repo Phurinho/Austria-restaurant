@@ -1,6 +1,6 @@
 @import './root.css';
 
-/* Section สำหรับ Booking */
+
 .title-booking {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
@@ -19,7 +19,6 @@
     z-index: 2;
 }
 
-/* ฟอร์มจอง */
 .textfield-container {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +45,6 @@ iframe {
     z-index: 3;
 }
 
-/* ส่วนจัดเรียง PDF และ Order */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -55,6 +53,8 @@ iframe {
     width: 100%;
     height: 100vh;
     padding: 2%;
+
+
 }
 
 .pdf-container,
@@ -78,6 +78,7 @@ iframe {
 .pdf-container embed {
     width: 100%;
     height: 100%;
+    /* object-fit: fill; */
     border-radius: 8px;
     border: 1px solid #ddd;
 }
@@ -114,15 +115,16 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
-/* สำหรับหน้าจอขนาดกลาง (แท็บเล็ต) */
 @media screen and (max-width: 1024px) {
-    .title {
+
+    .title h1 {
         top: 30%;
         font-size: 7rem;
     }
 
     .textfield-container {
         width: 77%;
+
     }
 
     .flex-container {
@@ -136,28 +138,28 @@ button[type="submit"]:hover {
         height: 70%;
     }
 
-    iframe {
-        width: 100%;
-        height: 300px;
+}
+
+@media screen and (max-width: 810px) {
+    .flex-container {
+        padding: 1%;
     }
 
-    .pdf-container embed {
-        height: 400px;
-    }
-
+    .pdf-container,
     .order-container {
-        height: 350px;
+        height: 55%;
     }
 }
 
-/* สำหรับหน้าจอขนาดเล็ก (มือถือ) */
 @media screen and (max-width: 768px) {
+
     .title {
         top: 15%;
         font-size: 6rem;
     }
 
     .textfield-container {
+
         width: 100%;
     }
 
@@ -168,19 +170,25 @@ button[type="submit"]:hover {
     .pdf-container,
     .order-container {
         flex: 1 1 100%;
+        /* Full width on smaller screens */
         height: 80%;
+        /* Adjust the height */
     }
 
     .pdf-container embed {
         height: 500px;
+        /* Set a specific height for small screens */
     }
 
     .order-container {
         height: 300px;
     }
+
+
 }
 
 @media screen and (max-width: 480px) {
+
     .title {
         top: 10%;
         font-size: 4rem;
@@ -200,7 +208,7 @@ button[type="submit"]:hover {
         height: 300px;
     }
 
-    .order-container {
+    .order-container{
         height: 300px;
     }
 
@@ -208,4 +216,5 @@ button[type="submit"]:hover {
         margin-bottom: 30%;
         justify-items: center;
     }
+
 }
