@@ -158,16 +158,13 @@ button[type="submit"]:hover {
 
 @media screen and (max-width: 480px) {
     .title {
-        top: 14%;
+        top: 16%;
         font-size: 3rem;
     }
 
     .textfield-container {
-        margin-top: 32%;
+        margin-top: 40%;
         margin-bottom: 3%;
-    }
-    .calendar{
-        
     }
 
     .order-container,
@@ -177,3 +174,5 @@ button[type="submit"]:hover {
         min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
     }
 }
+
+
