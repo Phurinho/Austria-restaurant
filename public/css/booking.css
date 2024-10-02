@@ -43,7 +43,9 @@
     margin-top: 20px;
     border: none; /* Remove iframe border */
     width: 80%;
-    height: 300px; /* Set a fixed height */
+    height: 300px; 
+    border-radius: 10px;
+
 }
 
 .flex-container {
@@ -156,12 +158,12 @@ button[type="submit"]:hover {
 
 @media screen and (max-width: 480px) {
     .title {
-        top: 5%;
+        top: 10%;
         font-size: 3rem;
     }
 
     .textfield-container {
-        margin-bottom: 30%;
+        margin-bottom: 10%;
     }
 
     .order-container,
