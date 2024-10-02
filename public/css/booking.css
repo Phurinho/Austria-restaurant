@@ -1,102 +1,98 @@
 @import './root.css';
 
-
+/* การตั้งค่ารูปภาพพื้นหลังและการจัดตำแหน่งในส่วนหัวเรื่อง Booking */
 .title-booking {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
     background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .title {
-    position: absolute;
-    top: 20%;
-    font-size: 7rem;
+    font-size: 6rem;
     color: var(--white-theme);
-    z-index: 2;
+    margin-bottom: 20px;
 }
 
+/* การจัดวางฟิลด์ข้อความในฟอร์มให้มีระยะห่างที่เหมาะสม */
 .textfield-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: space-between;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
 }
 
 .textfield-container input {
-    padding: 0 10px;
+    padding: 10px;
     height: 40px;
     background: var(--white-theme);
-    border: none;
-    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     width: 250px;
+    transition: all 0.3s ease;
+}
+
+.textfield-container input:focus {
+    border-color: #28a745;
+    outline: none;
 }
 
 iframe {
     border-radius: 10px;
     width: 80%;
-    height: 30%;
-    bottom: 10%;
-    position: absolute;
-    z-index: 3;
+    height: 350px;
+    margin-top: 20px;
 }
 
+/* การจัดการ Layout ของฟอร์มและการแสดง PDF */
 .flex-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row; /* แบ่งแนวนอน */
     justify-content: space-between;
     gap: 20px;
-    width: 100%;
-    height: 100vh;
     padding: 2%;
-
-
+    min-height: calc(100vh - 100px); /* หักค่าเฮดเดอร์ */
 }
 
-.pdf-container,
-.order-container {
-    flex: 1 1 48%;
+.order-container,
+.pdf-container {
+    flex: 1; /* ให้ทั้งสองช่องมีขนาดเท่ากัน */
     background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.pdf-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pdf-container embed {
-    width: 100%;
-    height: 100%;
-    /* object-fit: fill; */
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
+.pdf-container h1,
 .order-container h1 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
 textarea {
     flex: 1;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
     resize: none;
-    overflow: auto;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #28a745;
+    outline: none;
 }
 
 button[type="submit"] {
@@ -115,106 +111,70 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
+.pdf-container embed {
+    width: 100%;
+    height: 400px; /* ขนาดกำหนด */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* สำหรับหน้าจอขนาดกลาง */
 @media screen and (max-width: 1024px) {
-
-    .title h1 {
-        top: 30%;
-        font-size: 7rem;
+    .title {
+        font-size: 5rem;
     }
 
     .textfield-container {
-        width: 77%;
-
+        width: 90%;
     }
 
     .flex-container {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        align-items: center;
+        flex-direction: column; /* เปลี่ยนเป็นแนวตั้งสำหรับหน้าจอเล็ก */
+        gap: 20px;
     }
 
-    .pdf-container,
-    .order-container {
-        height: 70%;
-    }
-
-}
-
-@media screen and (max-width: 810px) {
-    .flex-container {
-        padding: 1%;
-    }
-
-    .pdf-container,
-    .order-container {
-        height: 55%;
+    .order-container,
+    .pdf-container {
+        height: auto;
     }
 }
 
+/* สำหรับหน้าจอขนาดเล็ก */
 @media screen and (max-width: 768px) {
-
     .title {
-        top: 15%;
-        font-size: 6rem;
-    }
-
-    .textfield-container {
-
-        width: 100%;
-    }
-
-    .flex-container {
-        height: 100%;
-    }
-
-    .pdf-container,
-    .order-container {
-        flex: 1 1 100%;
-        /* Full width on smaller screens */
-        height: 80%;
-        /* Adjust the height */
-    }
-
-    .pdf-container embed {
-        height: 500px;
-        /* Set a specific height for small screens */
-    }
-
-    .order-container {
-        height: 300px;
-    }
-
-
-}
-
-@media screen and (max-width: 480px) {
-
-    .title {
-        top: 10%;
         font-size: 4rem;
     }
 
-    .flex-container {
-        margin-bottom: 50px;
+    .textfield-container {
+        width: 100%;
     }
 
-    .pdf-container,
-    .order-container {
+    .flex-container {
+        height: auto; /* ใช้ขนาดอัตโนมัติ */
+    }
+
+    .order-container,
+    .pdf-container {
         width: 100%;
         height: auto;
     }
+}
+
+/* สำหรับหน้าจอขนาดเล็กมาก (มือถือ) */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .textfield-container input {
+        width: 100%;
+    }
+
+    .flex-container {
+        flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+    }
 
     .pdf-container embed {
-        height: 300px;
+        height: 300px; /* ความสูงของ PDF สำหรับหน้าจอเล็ก */
     }
-
-    .order-container{
-        height: 300px;
-    }
-
-    .textfield-container {
-        margin-bottom: 30%;
-        justify-items: center;
-    }
-
 }
