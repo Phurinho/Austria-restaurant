@@ -165,8 +165,19 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 480px) {
+<<<<<<< HEAD
     .calendar{
         top: 55%;
+=======
+    .title {
+        top: 16%;
+        font-size: 3rem;
+    }
+
+    .textfield-container {
+        margin-top: 40%;
+        margin-bottom: 3%;
+>>>>>>> c35b05ae1e92cc8e80259a0c1f9caacac28c59b5
     }
 
     .order-container,
@@ -176,3 +187,5 @@ button[type="submit"]:hover {
         min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
     }
 }
+
+
