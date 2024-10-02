@@ -2,10 +2,31 @@
 <html lang="en">
 <head>
     <%- include('./../components/head') %>
+    <link rel="stylesheet" href="/css/booking.css">
 </head>
 <body>
     <!-- navbar-->
     <%- include('./../components/navbar') %>
+
+    <section class="title-booking">
+        <h1 class="title">Booking</h1>
+        <div class="textfield-container">
+            <input type="text" placeholder="Name">
+            <input type="date">
+            <input type="number" placeholder="Count">
+            <input type="text" placeholder="Allergy">
+        </div>
+        <iframe src="https://calendar.google.com/calendar/embed?src=watcharapong16599%40gmail.com&ctz=Asia%2FBangkok"></iframe>
+    </section>
+    <section class="menu-container">
+        <div class="pdf-menu">
+            <img src="/assets/menu_paper.jpeg" alt="">
+        </div>
+        <div class="order-field">
+            <h1>Order</h1>
+            <textarea name="" id=""></textarea>
+        </div>
+    </section>
 
     <!-- footer -->
     <%- include('./../components/footer') %>

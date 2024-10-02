@@ -1,0 +1,74 @@
+@import './root.css';
+
+.title-booking {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
+    background-size: cover;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    top: 25%;
+    font-size: 4rem;
+    color: var(--white-theme);
+    z-index: 2;
+}
+
+.textfield-container {
+    width: 80%;
+    position: absolute;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}   
+
+.textfield-container input {
+    padding: 0 10px;
+    height: 30px;
+    background: var(--white-theme);
+    border: none;
+    border-radius: 10px;
+}
+
+iframe {
+    border-radius: 10px;
+    width: 80%;
+    height: 30%;
+    bottom: 10%;
+    position: absolute;
+    z-index: 3;
+}
+
+.menu-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.pdf-menu {
+
+}
+
+.pdf-menu img {
+    width: 500px;
+}
+
+.order-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-field textarea {
+    width: 500px;
+    height: 658px;
+    font-size: 1rem;
+    padding: 10px;
+}
