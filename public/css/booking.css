@@ -148,6 +148,7 @@ button[type="submit"]:hover {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .feedback-container form input {
