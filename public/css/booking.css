@@ -123,6 +123,7 @@ button[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10%;
 }
 
 .feedback .image-container img {
@@ -148,7 +149,7 @@ button[type="submit"]:hover {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+   
 }
 
 .feedback-container form input {
