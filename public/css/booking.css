@@ -222,6 +222,7 @@ textarea {
         top: 55%
     }
 
+
     .feedback .image-container img {
         width: 100vw;
         height: auto;
@@ -239,6 +240,12 @@ textarea {
         height: auto; /* Auto height */
         min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
     }
+
 }
 
+@media screen and (max-width: 425px){
+    .feedback{
+        margin-bottom: 20%;
+    }
+}
 
