@@ -1,52 +1,29 @@
 @import './root.css';
 
-.title-booking {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/assets/Thai-poster.jpg');
-    background-size: cover;
-    height: 100vh;
+
+.super-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px; /* เพิ่ม padding */
+    width: 100%;
+    padding: 5%;
+    border-radius: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../assets/background/course2.jpeg);
+    background-size: cover;
+    justify-items: center;
+    
 }
 
-.title {
-    position: absolute;
-    top: 20%;
-    font-size: 7rem;
-    color: var(--white-theme);
-    z-index: 2;
-    text-align: center;
-}
-
-.textfield-container {
-    position: absolute;
-    top: 45%;
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    gap: 10px;
-}
-
-.textfield-container input {
+.title-container {
     display: flex;
-    justify-self: center;
-    padding: 0 10px;
-    height: 40px;
-    background: var(--white-theme);
-    border: none;
-    border-radius: 10px;
-    width: 250px;
+    
 }
 
-.calendar {
-    position: absolute;
-    top: 55%;
-    border: none; /* Remove iframe border */
-    width: 80%;
-    height: 300px; 
-    border-radius: 10px;
+.title-container h1{
+    color:#fff;
+    justify-content: center;
+    font-size:6rem;
+    margin-top: 20%;
 
 }
 
@@ -56,20 +33,54 @@
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-    padding: 2%;
+    background-position: center;
+    backdrop-filter: blur(3px); /* Adds a slight blur to the background */
 }
 
 .order-container,
 .pdf-container {
-    flex: 1 1 48%; /* Use flex-basis to control width */
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    flex: 1 ;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.2), rgba(0, 255, 255, 0.05));
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items */
-    min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
+    align-items: center;
+    min-height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(3px);
+    margin-top: 5%;
+}
+
+.order-container h1,
+.pdf-container h1 {
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: color 0.4s;
+}
+
+
+
+.order-container p,
+.pdf-container p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-size: 1em;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pdf-container a{
+    color: lightseagreen;
+    font-size: large;
+    font-weight: 600;
 }
 
 .menu-image {
@@ -88,6 +99,18 @@
     font-size: 24px;
     margin-bottom: 15px;
     text-align: center; /* Center title */
+}
+
+.order-container input{
+    flex: 3 1 1;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+    overflow: auto;
+    margin : 2%;
 }
 
 textarea {
@@ -124,6 +147,7 @@ button[type="submit"]:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .feedback .image-container img {
@@ -172,22 +196,6 @@ textarea {
 
 /* Responsive styles */
 @media screen and (max-width: 1024px) {
-    .title {
-        top: 20%;
-        font-size: 5rem;
-    }
-
-    .textfield-container {
-        top: 40%;
-        width: 80%;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-
-    .flex-container {
-        flex-direction: column; /* Stack items vertically */
-        margin-top: 20px;
-        align-items: center;
-    }
 
     .order-container,
     .pdf-container {
@@ -199,13 +207,9 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-    .title {
-        top: 12%;
-        font-size: 3rem;
-    }
-
-    .textfield-container {
-        top: 25%;
+    
+    .title-container h1{
+        font-size: 4rem;
     }
 
     .flex-container {
@@ -215,13 +219,14 @@ textarea {
     .menu-image {
         height: 500px; /* Set height for mobile */
     }
+
+    .feedback .image-container img{
+        height: 70vh;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .calendar{
-        top: 55%
-    }
-
+    
 
     .feedback .image-container img {
         width: 100vw;

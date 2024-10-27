@@ -81,6 +81,13 @@ ul{
 }
 
 /*responsive*/
+@media (max-width:768px) {
+	.footer-col {
+		width: 24.5%;
+		padding: 0px 15px;
+	  }
+}
+
 @media(max-width: 767px){
   	.footer-col{
     	width: 50%;

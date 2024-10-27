@@ -7,19 +7,14 @@
 <body>
     <!-- navbar-->
     <%- include('./../components/navbar') %>
+   <!-- <h1 class="title">Booking</h1> -->
+  <section class="super-container">
 
-    <section class="title-booking">
-        <h1 class="title">Booking</h1>
-        <div class="textfield-container">
-            <input type="text" placeholder="Name" required>
-            <input type="date" placeholder="Date" required>
-            <input type="number" placeholder="Count" min="1" required>
-            <input type="text" placeholder="Allergy">
-        </div>
-        <iframe src="https://calendar.google.com/calendar/embed?src=watcharapong16599%40gmail.com&ctz=Asia%2FBangkok" class="calendar"></iframe>
-    </section>
+    <div class="title-container">
+        <h1>BOOKING</h1>
+    </div>
 
-    <section class="flex-container">
+   <div class="flex-container">
         <div class="pdf-container">
             <h1>Menu</h1>
             <img src="/assets/menu_paper.jpeg" alt="Menu" class="menu-image">
@@ -27,11 +22,18 @@
         </div>
         <div class="order-container">
             <h1>Order Details</h1>
+            <input type="text" placeholder="Name" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="email" placeholder="Email" required>
+            <input type="date" placeholder="Date" required>
+            <input type="number" placeholder="Count" min="1" required>
+            <input type="text" placeholder="Allergy">
             <textarea placeholder="Enter your order details here..." required></textarea>
             <button type="submit">Order now</button>
         </div>
-    </section>
-    <section class="feedback">
+    </div>
+</section>
+    <div class="feedback">
         <div class="image-container">
             <img src="/assets/feedback-img.jpg" alt="">
         </div>
@@ -45,7 +47,8 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </section>
+    </div>
+
 
     <!-- footer -->
     <%- include('./../components/footer') %>
