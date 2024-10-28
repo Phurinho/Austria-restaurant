@@ -195,29 +195,36 @@ textarea {
 }
 
 /* Responsive styles */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     .order-container,
     .pdf-container {
-        height: auto; /* Auto height */
-        min-width: 300px; /* เพิ่มความกว้างขั้นต่ำ */
-        width: 90%; /* กำหนดความกว้าง */
-        min-height: 500px; /* เพิ่มความสูงขั้นต่ำ */
+        height: auto; 
+        min-width: 300px; 
+        width: 90%; 
+        min-height: 500px; 
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px){
+    .feedback {
+        height: 50vh;
+        width: 50vw;
+      }
+}
+
+@media (max-width: 768px) {
     
     .title-container h1{
         font-size: 4rem;
     }
 
     .flex-container {
-        height: auto; /* Auto height */
+        height: auto; 
     }
 
     .menu-image {
-        height: 500px; /* Set height for mobile */
+        height: 500px; 
     }
 
     .feedback .image-container img{
@@ -225,8 +232,7 @@ textarea {
     }
 }
 
-@media screen and (max-width: 480px) {
-    
+@media  (max-width: 480px) {
 
     .feedback .image-container img {
         width: 100vw;
@@ -241,14 +247,14 @@ textarea {
 
     .order-container,
     .pdf-container {
-        width: 100%; /* Full width */
-        height: auto; /* Auto height */
-        min-height: 400px; /* เพิ่มความสูงขั้นต่ำ */
+        width: 100%; 
+        height: auto; 
+        min-height: 400px; 
     }
 
 }
 
-@media screen and (max-width: 460px){
+@media  (max-width: 460px){
     .feedback{
         margin-bottom: 20%;
     }

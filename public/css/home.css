@@ -297,8 +297,16 @@
       height: 300px;
     }
     .heading {
-      font-size: 3rem;
+      font-size: 4rem;
+      padding:0.5rem;
     }
+    .about .row .poster-container h3{
+      top: 30%;
+    }
+    .about .row .poster-container img{
+      height:80%;
+    }
+
     .about .row .content {
       flex: 1 1 20rem;
     }
@@ -318,6 +326,12 @@
   
   /* 425px */
   @media (max-width: 425px) {
+    
+    .menu-image {
+      width: auto;
+      height: 400px;
+  }
+
     .about .row .video-container h3 {
       font-size: 1rem;
     }
@@ -340,5 +354,8 @@
     }
     .gal-img{
       border-radius: 0px;
+    }
+    .cta-content p{
+      padding: 5%;
     }
   }
