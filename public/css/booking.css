@@ -196,67 +196,107 @@ textarea {
 
 /* Responsive styles */
 @media (max-width: 1024px) {
+    .title-container h1 {
+        font-size: 5rem;
+    }
 
     .order-container,
     .pdf-container {
-        height: auto; 
-        min-width: 300px; 
-        width: 90%; 
-        min-height: 500px; 
+        width: 90%;
+        min-height: 400px;
+    }
+
+    .feedback .image-container img {
+        max-height: 70vh;
     }
 }
 
-@media screen and (max-width: 810px){
-    .feedback {
-        height: 50vh;
-        width: 50vw;
-      }
-}
-
-@media (max-width: 768px) {
-    
-    .title-container h1{
-        font-size: 4rem;
+@media (max-width: 810px) {
+    .title-container h1 {
+        font-size: 3.5rem;
+        margin-top: 10%; /* Adjust spacing for better visibility */
     }
 
     .flex-container {
-        height: auto; 
+        gap: 15px; /* Reduced gap for tighter layout */
     }
 
-    .menu-image {
-        height: 500px; 
+    .order-container,
+    .pdf-container {
+        width: 100%;
+        min-height: 350px;
+        padding: 20px;
     }
 
-    .feedback .image-container img{
-        height: 70vh;
+    .feedback {
+        width: 100%;
+        padding: 0 15px;
     }
-}
-
-@media  (max-width: 480px) {
 
     .feedback .image-container img {
-        width: 100vw;
         height: auto;
-        padding: 30px;
+        max-height: 60vh;
     }
 
     .feedback-container form {
-        width: 300px;
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-container h1 {
+        font-size: 3rem;
+    }
+
+    .feedback .image-container img {
+        margin-top: 50%;
+        height: auto;
+    }
+
+    .feedback-container form {
+        width: 90%;
         padding: 0 10px;
     }
 
     .order-container,
     .pdf-container {
-        width: 100%; 
-        height: auto; 
-        min-height: 400px; 
+        width: 100%;
+        min-height: 350px;
     }
-
 }
 
-@media  (max-width: 460px){
-    .feedback{
-        margin-bottom: 20%;
+/* Adjustments for even smaller screens */
+@media (max-width: 480px) {
+    .title-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .feedback {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .feedback .image-container img {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .feedback-container form {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .order-container,
+    .pdf-container {
+        width: 100%;
+        min-height: 300px;
+        padding: 15px;
     }
 }
 
