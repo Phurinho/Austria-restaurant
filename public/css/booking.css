@@ -146,18 +146,19 @@ button[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-bottom: 10%;
     margin-top: 5%;
 }
 
 .feedback .image-container img {
-    height: 100vh;
+    height: 90vh;
     border-radius: 10px;
 }
 
 .feedback .feedback-container {
     margin: 0 30px;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,7 +171,7 @@ button[type="submit"]:hover {
 
 .feedback-container form {
     width: 400px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
    
