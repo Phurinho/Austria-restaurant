@@ -15,9 +15,9 @@ server.get('/', (req, res) => {
     res.render('pages/home', { homeImgs });
 });
 
-server.get('/gallery', (req, res) => {
-    res.render('pages/gallery', { galleryImgs_1, galleryImgs_2});
-});
+// server.get('/gallery', (req, res) => {
+//     res.render('pages/gallery', { galleryImgs_1, galleryImgs_2});
+// });
 
 server.get('/menu', (req, res) => {
     res.render('pages/menu', { menuImgs, hotdealImgs });
@@ -25,6 +25,10 @@ server.get('/menu', (req, res) => {
 
 server.get('/booking', (req, res) => {
     res.render('pages/booking');
+});
+
+server.get('/contact', (req, res) => {
+    res.render('pages/contact');
 });
 
 const PORT = 5000 || 5001;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./../components/head') %>
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+    <%- include('./../components/navbar') %>
+
+    <div class="space"></div>
+    <div class="feedback">
+        <div class="image-container">
+            <img src="/assets/feedback-img.jpg" alt="">
+        </div>
+        <div class="feedback-container">
+            <h1>Feedback</h1>
+            <form action="">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <textarea name="" id="" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('./../components/footer') %>
+</body>
+
+</html>

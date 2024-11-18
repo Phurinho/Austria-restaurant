@@ -18,7 +18,7 @@
         <div class="pdf-container">
             <h1>Menu</h1>
             <img src="/assets/menu_paper.jpeg" alt="Menu" class="menu-image">
-            <p>Your browser does not support displaying PDFs. <a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
+            <p><a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
         </div>
         <div class="order-container">
             <h1>Order Details</h1>
@@ -29,27 +29,24 @@
             <input type="number" placeholder="Count" min="1" required>
             
             <textarea placeholder="Enter your order details here..." required></textarea>
+            <div class="checkbox-container">
+                <div class="radio-container">
+                    <input type="radio" name="check" id="restaurant">
+                    <label for="restaurant">Eat at restaurant</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="check" id="house">
+                    <label for="house">Take away</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="check" id="cooking">
+                    <label for="cooking">Cooking at house</label>
+                </div>
+            </div>
             <button type="submit">Order now</button>
         </div>
     </div>
 </section>
-    <div class="feedback">
-        <div class="image-container">
-            <img src="/assets/feedback-img.jpg" alt="">
-        </div>
-        <div class="feedback-container">
-            <h1>Feedback</h1>
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <textarea name="" id="" placeholder="Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-
     <!-- footer -->
     <%- include('./../components/footer') %>
 </body>
