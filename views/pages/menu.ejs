@@ -107,7 +107,23 @@
         </section>
 
         <section class="menu-paper">
-            <img src="/assets/menu_paper.jpeg" alt="">
+            <!-- <img src="/assets/menu_paper.jpeg" alt=""> -->
+            <section class="slider">
+                <div class="slider_content" id="slider">
+                    <div class="list">
+                        <% menuImgs_1.forEach( menu_1 => { %>
+                            <div class="item">
+                                <img src="/assets/<%= menu_1.img %>" alt="">
+                            </div>
+                            <% }) %>
+                    </div>
+                    <div class="buttons">
+                        <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                </div>
+            </section>
         </section>
 
     </article>

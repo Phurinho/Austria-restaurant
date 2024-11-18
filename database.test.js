@@ -98,6 +98,13 @@ exports.menuImgs = [
     },
 ];
 
+exports.menuImgs_1 = [
+    { img: "menu1/menu_paper1.jpeg", },
+    { img: "menu1/menu_paper2.jpeg", },
+    { img: "menu1/menu_paper3.jpeg", },
+    
+];
+
 exports.hotdealImgs = [
     {
         img: "gallery/Thai-1.jpg",

@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const server = express();
 
-const { homeImgs, galleryImgs_1, galleryImgs_2, menuImgs, hotdealImgs } = require('./database.test');
+const { homeImgs, galleryImgs_1, galleryImgs_2, menuImgs, hotdealImgs, menuImgs_1} = require('./database.test');
 
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "views"));
@@ -20,11 +20,11 @@ server.get('/', (req, res) => {
 // });
 
 server.get('/menu', (req, res) => {
-    res.render('pages/menu', { menuImgs, hotdealImgs });
+    res.render('pages/menu', { menuImgs, hotdealImgs, menuImgs_1 });
 });
 
 server.get('/booking', (req, res) => {
-    res.render('pages/booking');
+    res.render('pages/booking', { menuImgs_1 });
 });
 
 server.get('/contact', (req, res) => {
