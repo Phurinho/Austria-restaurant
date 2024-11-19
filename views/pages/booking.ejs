@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./../components/head') %>
     <link rel="stylesheet" href="/css/booking.css">
 </head>
+
 <body>
     <!-- navbar-->
     <%- include('./../components/navbar') %>
-   <!-- <h1 class="title">Booking</h1> -->
-  <section class="super-container">
+    <section class="super-container">                                                                       
 
-    <div class="title-container">
-        <h1>BOOKING</h1>
-    </div>
-
-   <div class="flex-container">
-        <div class="pdf-container">
-            <h1>Menu</h1>
-            <%- include('./../components/slider.ejs') %>
-            <p><a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
+        <div class="title-container">
+            <h1>BOOKING</h1>
         </div>
-        <div class="order-container">
-            <h1>Order Details</h1>
-            <input type="date" placeholder="Date" required>
-            <input type="text" placeholder="Name" required>
-            <input type="tel" placeholder="Phone" required>
-            <input type="email" placeholder="Email" required>
-            <input type="number" placeholder="Count" min="1" required>
-            
-            <textarea placeholder="Enter your order details here..." required></textarea>
-            <div class="checkbox-container">
-                <div class="radio-container">
-                    <input type="radio" name="check" id="restaurant">
-                    <label for="restaurant">Eat at restaurant</label>
-                </div>
-                <div class="radio-container">
-                    <input type="radio" name="check" id="house">
-                    <label for="house">Take away</label>
-                </div>
-                <div class="radio-container">
-                    <input type="radio" name="check" id="cooking">
-                    <label for="cooking">Cooking at house</label>
-                </div>
+
+        <div class="flex-container">    
+            <!-- pdf container -->
+            <div class="pdf-container">
+                <h1>Menu</h1>
+                <%- include('./../components/slider.ejs') %>
+                <p><a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
             </div>
-            <button type="submit">Order now</button>
+
+            <!-- order form -->
+            <form action="" class="order-container">
+                <h1>Order Details</h1>
+                <input type="date" placeholder="Date" required>
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="email" placeholder="Email" required>
+                <input type="number" placeholder="Count" min="1" required>
+
+                <textarea placeholder="Enter your order details here..." required></textarea>
+                
+                <!-- radio button -->
+                <div class="radio-container">
+                    <div class="radio">
+                        <input type="radio" name="check" id="restaurant">
+                        <label for="restaurant">Eat at restaurant</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="check" id="house">
+                        <label for="house">Take away</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="check" id="cooking">
+                        <label for="cooking">Cooking at house</label>
+                    </div>
+                </div>
+                <button type="submit">Order now</button>
+            </form>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- footer -->
     <%- include('./../components/footer') %>
 </body>
+
 </html>

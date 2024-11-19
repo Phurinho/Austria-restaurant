@@ -16,7 +16,6 @@
 
 .title-container {
     display: flex;
-    
 }
 
 .title-container h1{
@@ -30,7 +29,7 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     width: 100%;
     background-position: center;
@@ -39,7 +38,6 @@
 
 .order-container,
 .pdf-container {
-    flex: 1 ;
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.2), rgba(0, 255, 255, 0.05));
     padding: 25px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.1);
@@ -117,6 +115,7 @@ textarea {
     flex: 1;
     width: 100%;
     padding: 10px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 16px;
@@ -144,19 +143,21 @@ textarea {
     font-family: var(--font-poppins);
 }
 
-.checkbox-container {
+.radio-container {
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 15px 0;
 }
 
-.checkbox-container .radio-container {
+.radio-container .radio {
     display: flex;
     align-items: center;
     margin: 0 20px;
 }
 
-.checkbox-container .radio-container input {
+.radio-container .radio input {
     appearance: none;
     padding: 0;
     margin: 5px;
@@ -167,13 +168,13 @@ textarea {
     border-radius: 20px;
 }
 
-.checkbox-container .radio-container input:checked {
+.radio-container .radio input:checked {
     background-color: lightseagreen;
 }
 
-.checkbox-container .radio-container label {
+.radio-container .radio label {
     color: var(--white-theme);
-    font-size: 16px;
+    font-size: 1rem;
     font-family: var(--font-poppins);
 }
 
@@ -187,11 +188,7 @@ textarea {
     .pdf-container {
         width: 90%;
         min-height: 400px;
-    }
-
-    .feedback .image-container img {
-        max-height: 70vh;
-    }
+    }       
 }
 
 @media (max-width: 810px) {
@@ -211,40 +208,23 @@ textarea {
         padding: 20px;
     }
 
-    .feedback {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .feedback .image-container img {
-        height: auto;
-        max-height: 60vh;
-    }
-
-    .feedback-container form {
-        width: 95%;
-        padding: 0 15px;
-    }
-
     button[type="submit"] {
         padding: 8px 16px;
         font-size: 14px;
+    }
+
+    .radio-container .radio {
+        margin: 0 3px;
+    }
+
+    .radio-container .radio label {
+        font-size: .8rem;
     }
 }
 
 @media (max-width: 768px) {
     .title-container h1 {
         font-size: 3rem;
-    }
-
-    .feedback .image-container img {
-        margin-top: 50%;
-        height: auto;
-    }
-
-    .feedback-container form {
-        width: 90%;
-        padding: 0 10px;
     }
 
     .order-container,
@@ -260,26 +240,15 @@ textarea {
         font-size: 2.5rem;
     }
 
-    .feedback {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .feedback .image-container img {
-        width: 100%;
-        padding: 5px;
-    }
-
-    .feedback-container form {
-        width: 100%;
-        padding: 0 5px;
-    }
-
     .order-container,
     .pdf-container {
         width: 100%;
         min-height: 300px;
         padding: 15px;
+    }
+
+    .radio-container .radio input {
+        
     }
 }
 
