@@ -247,8 +247,13 @@ textarea {
         padding: 15px;
     }
 
-    .radio-container .radio input {
-        
+    .radio-container .radio {
+        margin: 0;
+    }
+
+    .radio-container {
+        flex-direction: column;
+        align-items: start;
     }
 }
 
