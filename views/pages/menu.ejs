@@ -13,28 +13,27 @@
     <%- include('./../components/navbar') %>
 
     <article>
-        <!-- <div class="hotdeal-container">
+        <div class="hotdeal-container">
 
             <div class="hotdeal-slide">
-    
-                <% hotdealImgs.forEach(hotdeal => { %>
-                    <div class="hotdeal-item" style="background-image: url('/assets/<%= hotdeal.img %>');">
+                <% if (hotdealImgs.length > 0) { %>
+                    <div class="hotdeal-item" style="background-image: url('/assets/<%= hotdealImgs[0].img %>');">
                         <div class="hotdeal-content">
-                            <div class="hotdeal-name"><%= hotdeal.name %></div>
-                            <div class="hotdeal-des"><%= hotdeal.detail %></div>
+                            <div class="hotdeal-name"><%= hotdealImgs[0].name %></div>
+                            <div class="hotdeal-des"><%= hotdealImgs[0].detail %></div>
                             <button>See More</button>
                         </div>
                     </div>
-                <% }) %>
-    
-            </div>  
-    
-            <div class="hotdeal-button">
+                <% } %>
+            </div>
+        
+            <!-- <div class="hotdeal-button">
                 <button class="hotdeal-prev"><i class="fa-solid fa-arrow-left"></i></button>
                 <button class="hotdeal-next"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-    
-        </div> -->
+            </div> -->
+        
+        </div>
+        
 
         <section class="menu">
             <div class="menu-container">
