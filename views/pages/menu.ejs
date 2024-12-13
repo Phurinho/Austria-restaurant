@@ -1,135 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <!-- static head -->
     <%- include('./../components/head') %>
-    <link rel="stylesheet" href="/css/menu.css">
+        <link rel="stylesheet" href="/css/menu.css">
 
 </head>
+
 <body>
 
     <!-- navbar -->
     <%- include('./../components/navbar') %>
 
-    <article>
-        <div class="hotdeal-container">
+        <article>
+            <div class="hotdeal-container">
 
-            <div class="hotdeal-slide">
-                <% if (hotdealImgs.length > 0) { %>
-                    <div class="hotdeal-item" style="background-image: url('/assets/<%= hotdealImgs[0].img %>');">
-                        <div class="hotdeal-content">
-                            <div class="hotdeal-name"><%= hotdealImgs[0].name %></div>
-                            <div class="hotdeal-des"><%= hotdealImgs[0].detail %></div>
-                            <button>See More</button>
+                <div class="hotdeal-slide">
+                    <% if (hotdealImgs.length> 0) { %>
+                        <div class="hotdeal-item" style="background-image: url('/assets/<%= hotdealImgs[0].img %>');">
+                            <div class="hotdeal-content">
+                                <div class="hotdeal-name">
+                                    <%= hotdealImgs[0].name %>
+                                </div>
+                                <div class="hotdeal-des">
+                                    <%= hotdealImgs[0].detail %>
+                                </div>
+                                <button>See More</button>
+                            </div>
                         </div>
-                    </div>
-                <% } %>
-            </div>
-        
-            <!-- <div class="hotdeal-button">
+                        <% } %>
+                </div>
+
+                <!-- <div class="hotdeal-button">
                 <button class="hotdeal-prev"><i class="fa-solid fa-arrow-left"></i></button>
                 <button class="hotdeal-next"><i class="fa-solid fa-arrow-right"></i></button>
             </div> -->
-        
-        </div>
-        
 
-        <section class="menu">
-            <div class="menu-container">
-                <h1>Northern</h1>
-                <div class="food-container">
-                    <% menuImgs.forEach(menu => { %>
-                        <div class="food">
-                            <img src="/assets/<%= menu.img %>" alt="Food">
-                            <div class="food-content">
-                                <p><%= menu.name %></p>
-                                <p>$<%= menu.price %></p>
-                                <!-- <button>Add</button> -->
-                            </div>
-                        </div>
-                    <% }) %>
-                </div>
-                <h1>Central</h1>
-                <div class="food-container">
-                    <% menuImgs.forEach(menu => { %>
-                        <div class="food">
-                            <img src="/assets/<%= menu.img %>" alt="Food">
-                            <div class="food-content">
-                                <p><%= menu.name %></p>
-                                <p>$<%= menu.price %></p>
-                                <!-- <button>Add</button> -->
-                            </div>
-                        </div>
-                    <% }) %>
-                </div>
-                <h1>Northeast</h1>
-                <div class="food-container">
-                    <% menuImgs.forEach(menu => { %>
-                        <div class="food">
-                            <img src="/assets/<%= menu.img %>" alt="Food">
-                            <div class="food-content">
-                                <p><%= menu.name %></p>
-                                <p>$<%= menu.price %></p>
-                                <!-- <button>Add</button> -->
-                            </div>
-                        </div>
-                    <% }) %>
-                </div>
-                <h1>South</h1>
-                <div class="food-container">
-                    <% menuImgs.forEach(menu => { %>
-                        <div class="food">
-                            <img src="/assets/<%= menu.img %>" alt="Food">
-                            <div class="food-content">
-                                <p><%= menu.name %></p>
-                                <p>$<%= menu.price %></p>
-                                <!-- <button>Add</button> -->
-                            </div>
-                        </div>
-                    <% }) %>
-                </div>        
-                <h1>Austria</h1>
-                <div class="food-container">
-                    <% menuImgs.forEach(menu => { %>
-                        <div class="food">
-                            <img src="/assets/<%= menu.img %>" alt="Food">
-                            <div class="food-content">
-                                <p><%= menu.name %></p>
-                                <p>$<%= menu.price %></p>
-                                <!-- <button>Add</button> -->
-                            </div>
-                        </div>
-                    <% }) %>
-                </div>        
             </div>
-        </section>
 
-        <section class="menu-paper">
-            <!-- <img src="/assets/menu_paper.jpeg" alt=""> -->
-            <section class="slider">
-                <div class="slider_content" id="slider">
-                    <div class="list">
-                        <% menuImgs_1.forEach( menu_1 => { %>
-                            <div class="item">
-                                <img src="/assets/<%= menu_1.img %>" alt="">
+
+            <section class="menu">
+                <div class="menu-container">
+                    <h1>Northern</h1>
+                    <div class="food-container">
+                        <% menuImgs.forEach(menu=> { %>
+                            <div class="food">
+                                <img src="/assets/<%= menu.img %>" alt="Food">
+                                <div class="food-content">
+                                    <p>
+                                        <%= menu.name %>
+                                    </p>
+                                    <p>$<%= menu.price %>
+                                    </p>
+                                    <!-- <button>Add</button> -->
+                                </div>
                             </div>
                             <% }) %>
                     </div>
-                    <div class="buttons">
-                        <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                    <h1>Central</h1>
+                    <div class="food-container">
+                        <% menuImgs.forEach(menu=> { %>
+                            <div class="food">
+                                <img src="/assets/<%= menu.img %>" alt="Food">
+                                <div class="food-content">
+                                    <p>
+                                        <%= menu.name %>
+                                    </p>
+                                    <p>$<%= menu.price %>
+                                    </p>
+                                    <!-- <button>Add</button> -->
+                                </div>
+                            </div>
+                            <% }) %>
                     </div>
-
+                    <h1>Northeast</h1>
+                    <div class="food-container">
+                        <% menuImgs.forEach(menu=> { %>
+                            <div class="food">
+                                <img src="/assets/<%= menu.img %>" alt="Food">
+                                <div class="food-content">
+                                    <p>
+                                        <%= menu.name %>
+                                    </p>
+                                    <p>$<%= menu.price %>
+                                    </p>
+                                    <!-- <button>Add</button> -->
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                    <h1>South</h1>
+                    <div class="food-container">
+                        <% menuImgs.forEach(menu=> { %>
+                            <div class="food">
+                                <img src="/assets/<%= menu.img %>" alt="Food">
+                                <div class="food-content">
+                                    <p>
+                                        <%= menu.name %>
+                                    </p>
+                                    <p>$<%= menu.price %>
+                                    </p>
+                                    <!-- <button>Add</button> -->
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                    <h1>Austria</h1>
+                    <div class="food-container">
+                        <% menuImgs.forEach(menu=> { %>
+                            <div class="food">
+                                <img src="/assets/<%= menu.img %>" alt="Food">
+                                <div class="food-content">
+                                    <p>
+                                        <%= menu.name %>
+                                    </p>
+                                    <p>$<%= menu.price %>
+                                    </p>
+                                    <!-- <button>Add</button> -->
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
                 </div>
             </section>
-        </section>
 
-    </article>
+            <section class="menu-paper">
+                <!-- <img src="/assets/menu_paper.jpeg" alt=""> -->
+                <section class="slider">
+                    <div class="slider_content" id="slider">
+                        <div class="list">
+                            <% menuImgs_1.forEach(menu_1 => { %>
+                            <div class="item">
+                                <img src="/assets/<%= menu_1.img %>" alt="" class="zoomable">
+                            </div>
+                            <% }) %>
+                        </div>
+                        <div class="buttons">
+                            <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Modal สำหรับซูมรูป -->
+                <div id="zoomModal" class="modal">
+                    <span id="closeModal">&times;</span>
+                    <div class="modal-zoom-container">
+                        <img class="modal-content" id="zoomedImage">
+                    </div>
+                </div>
+                
+            </section>
 
-    <!-- footer -->
-    <%- include('./../components/footer') %>
-    <script src="/js/menu-script.js"></script>
+        </article>
+
+        <!-- footer -->
+        <%- include('./../components/footer') %>
+            <script src="/js/menu-script.js"></script>
 
 </body>
+
 </html>

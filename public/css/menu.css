@@ -251,7 +251,7 @@ article {
     overflow: hidden;
 }
 .slider_content .list {
-    display: flex;
+    display: flex; 
     transition: transform 0.3s ease-in-out;
 }
 .slider_content .item {
@@ -261,7 +261,76 @@ article {
 .slider_content .item img {
     width: 100%;
     height: auto;
+    cursor: zoom-in;
 }
+/* input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox]:checked ~ label > img{
+    transform: scale(1.5);
+} */
+
+/* สไตล์ของ modal */
+.modal {
+    display: none; /* ซ่อน modal เป็นค่าเริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังโปร่งแสง */
+    z-index: 1000; /* ให้ modal อยู่เหนือทุกองค์ประกอบ */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* ซ่อนส่วนเกินเมื่อซูม */
+}
+
+/* พื้นที่สำหรับภาพที่ซูม */
+.modal-zoom-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* ซ่อนส่วนที่ล้นออกจาก container */
+}
+
+/* สไตล์ของภาพใน modal */
+.modal-content {
+    max-width: 90%; /* จำกัดความกว้างสูงสุดของภาพ */
+    max-height: 90%; /* จำกัดความสูงสูงสุดของภาพ */
+    transition: transform 0.3s ease; /* การซูมจะนุ่มนวล */
+    will-change: transform; /* ปรับแต่งเพื่อให้การแสดงผลลื่น */
+    cursor: zoom-in; /* เปลี่ยน cursor เป็น zoom-in */
+}
+
+/* เมื่อซูมเข้า */
+.modal-content.zoomed-in {
+    cursor: zoom-out; /* เปลี่ยน cursor เป็น zoom-out */
+}
+
+/* ปุ่มปิด modal */
+#closeModal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* ให้อยู่เหนือรูปภาพ */
+}
+
+/* Responsive adjustments (ถ้าต้องการ) */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 100%; /* ปรับให้ภาพขยายเต็มที่บนหน้าจอขนาดเล็ก */
+        max-height: 100%;
+    }
+}
+
+
 .slider .buttons {
     position: absolute;
     top: 50%;
