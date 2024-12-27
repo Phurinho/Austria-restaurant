@@ -178,6 +178,62 @@ textarea {
     font-family: var(--font-poppins);
 }
 
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+.slider_content .list {
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+}
+.slider_content .item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slider_content .item img {
+    width: 100%;
+    height: auto;
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* ปุ่มซ้าย-ขวาแยกออก */
+    transform: translateY(-50%);
+}
+
+.slider .buttons button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 40%; /* ปุ่มกลม */
+    background: none;
+    color: var(--black-theme);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider .buttons button:hover {
+    background-color: var(--smoke-theme);
+    color: var(--black-theme);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ปรับตำแหน่งสำหรับหน้าแรกหรือหน้าสุดท้าย */
+.slider .buttons.only-right {
+    justify-content: flex-end; /* ปุ่มอยู่ด้านขวา */
+}
+
+.slider .buttons.only-left {
+    justify-content: flex-start; /* ปุ่มอยู่ด้านซ้าย */
+}
+
+
 /* Responsive styles */
 @media (max-width: 1024px) {
     .title-container h1 {

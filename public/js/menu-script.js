@@ -42,12 +42,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const list = slider.querySelector(".list");
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
+    const buttons = slider.querySelector(".buttons");
 
     let currentIndex = 0;
 
     const updateSlider = () => {
         const width = slider.offsetWidth;
         list.style.transform = `translateX(-${currentIndex * width}px)`;
+        updateButtonVisibility();
+    };
+
+    const updateButtonVisibility = () => {
+        buttons.classList.remove("only-left", "only-right");
+
+        if (currentIndex === 0) {
+            prev.style.display = "none";
+            next.style.display = "block";
+            buttons.classList.add("only-right");
+        } else if (currentIndex === list.children.length - 1) {
+            prev.style.display = "block";
+            next.style.display = "none";
+            buttons.classList.add("only-left");
+        } else {
+            prev.style.display = "block";
+            next.style.display = "block";
+        }
     };
 
     prev.addEventListener("click", () => {
@@ -61,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("resize", updateSlider);
+    updateButtonVisibility();
 
     // Modal Zoom
     const modal = document.getElementById("zoomModal");
@@ -70,20 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let scale = 1;
 
-    // เปิด modal
     slider.querySelectorAll(".zoomable").forEach((img) => {
         img.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImg.src = img.src;
-
-            // รีเซ็ตค่าซูม
             scale = 1;
             modalImg.style.transform = `scale(1)`;
-            document.body.style.overflow = "hidden"; // ปิด scroll หน้าเว็บ
+            document.body.style.overflow = "hidden";
         });
     });
 
-    // ซูมรูปภาพ
     zoomContainer.addEventListener("wheel", (e) => {
         e.preventDefault();
         const delta = e.deltaY > 0 ? -0.1 : 0.1;
@@ -91,12 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
         modalImg.style.transform = `scale(${scale})`;
     });
 
-    // ปิด modal เมื่อคลิกปุ่มปิด
     closeModal.addEventListener("click", () => closeModalModal());
 
-    // ปิด modal เมื่อคลิกนอกภาพ
     modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
+        if (!modalImg.contains(e.target)) {
             closeModalModal();
         }
     });
@@ -104,13 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModalModal = () => {
         modal.style.display = "none";
         modalImg.src = "";
-        document.body.style.overflow = ""; // เปิด scroll หน้าเว็บ
+        document.body.style.overflow = "";
     };
 
-    // ปิด modal เมื่อกดปุ่ม Escape
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.style.display === "flex") {
             closeModalModal();
         }
     });
 });
+

@@ -263,6 +263,8 @@ article {
     height: auto;
     cursor: zoom-in;
 }
+
+
 /* input[type=checkbox]{
     display: none;
 }
@@ -322,28 +324,20 @@ input[type=checkbox]:checked ~ label > img{
     z-index: 1001; /* ให้อยู่เหนือรูปภาพ */
 }
 
-/* Responsive adjustments (ถ้าต้องการ) */
-@media (max-width: 768px) {
-    .modal-content {
-        max-width: 100%; /* ปรับให้ภาพขยายเต็มที่บนหน้าจอขนาดเล็ก */
-        max-height: 100%;
-    }
-}
-
-
 .slider .buttons {
     position: absolute;
     top: 50%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* ปุ่มซ้าย-ขวาแยกออก */
+    transform: translateY(-50%);
 }
 
 .slider .buttons button {
     width: 35px;
     height: 35px;
     font-size: 20px;
-    border-radius: 10%;
+    border-radius: 40%; /* ปุ่มกลม */
     background: none;
     color: var(--black-theme);
     border: none;
@@ -357,6 +351,14 @@ input[type=checkbox]:checked ~ label > img{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+/* ปรับตำแหน่งสำหรับหน้าแรกหรือหน้าสุดท้าย */
+.slider .buttons.only-right {
+    justify-content: flex-end; /* ปุ่มอยู่ด้านขวา */
+}
+
+.slider .buttons.only-left {
+    justify-content: flex-start; /* ปุ่มอยู่ด้านซ้าย */
+
 @media screen and (max-width: 768px) {
     .hotdeal-container .hotdeal-content {
         width: 200px;
@@ -365,6 +367,10 @@ input[type=checkbox]:checked ~ label > img{
 
     .menu-paper img {
         width: 80%;
+    }
+    .modal-content {
+        max-width: 100%; /* ปรับให้ภาพขยายเต็มที่บนหน้าจอขนาดเล็ก */
+        max-height: 100%;
     }
 }
 
