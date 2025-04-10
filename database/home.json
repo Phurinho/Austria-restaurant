@@ -1,0 +1,9 @@
+{
+  "HomeImgs": [
+    { "path": "home/slider_1.jpg" },
+    { "path": "home/slider_2.jpg" },
+    { "path": "home/slider_3.jpg" },
+    { "path": "home/slider_4.jpg" },
+    { "path": "home/slider_5.jpg" }
+  ]
+}

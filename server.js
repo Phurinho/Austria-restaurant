@@ -2,7 +2,10 @@ const express = require('express');
 const path = require('path');
 const server = express();
 
-const { homeImgs, galleryImgs_1, galleryImgs_2, menuImgs, hotdealImgs, menuImgs_1} = require('./database.test');
+const allmenu = require("./database/menu.json");
+const homeImgs = require("./database/home.json");
+const hotdealImgs = require("./database/hotdeal.json");
+const menu_book = require("./database/menu_book.json");
 
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "views"));
@@ -12,19 +15,23 @@ server.use(express.static(path.join(__dirname, "public")));
 server.use(express.urlencoded({ extended: true }))
 
 server.get('/', (req, res) => {
-    res.render('pages/home', { homeImgs });
+    res.render('pages/home', { homeImgs: homeImgs.HomeImgs });
 });
 
 // server.get('/gallery', (req, res) => {
 //     res.render('pages/gallery', { galleryImgs_1, galleryImgs_2});
-// });
+// });`
 
 server.get('/menu', (req, res) => {
-    res.render('pages/menu', { menuImgs, hotdealImgs, menuImgs_1 });
+    res.render('pages/menu', { 
+        hotdealImgs: hotdealImgs.HotDealImgs,
+        allmenu: allmenu.AllMenu,
+        menu_book: menu_book.MenuBook,
+    });
 });
 
 server.get('/booking', (req, res) => {
-    res.render('pages/booking', { menuImgs_1 });
+    res.render('pages/booking', { menu_book: menu_book.MenuBook });
 });
 
 server.get('/contact', (req, res) => {

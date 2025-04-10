@@ -22,9 +22,9 @@
                 <section class="slider">
                     <div class="slider_content" id="slider">
                         <div class="list">
-                            <% menuImgs_1.forEach( menu_1 => { %>
+                            <% menu_book.forEach((menu) => { %>
                                 <div class="item">
-                                    <img src="/assets/<%= menu_1.img %>" alt="">
+                                    <img src="/assets/<%= menu.path %>" alt="">
                                 </div>
                                 <% }) %>
                         </div>
@@ -35,7 +35,7 @@
                 
                     </div>
                 </section>
-                <p><a href="/assets/menu/menu_paper.pdf">Download the PDF</a></p>
+                <p><a href="/assets/menu/menu_book.pdf">Download the PDF</a></p>
             </div>
 
             <!-- order form -->

@@ -167,7 +167,7 @@ article {
     height: 700px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     border: 2px solid rgba(0, 0, 0, .1);
 }
 
@@ -358,6 +358,7 @@ input[type=checkbox]:checked ~ label > img{
 
 .slider .buttons.only-left {
     justify-content: flex-start; /* ปุ่มอยู่ด้านซ้าย */
+}
 
 @media screen and (max-width: 768px) {
     .hotdeal-container .hotdeal-content {
