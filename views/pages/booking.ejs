@@ -3,76 +3,85 @@
 
 <head>
     <%- include('./../components/head') %>
-    <link rel="stylesheet" href="/css/booking.css">
+        <link rel="stylesheet" href="/css/booking.css">
 </head>
 
 <body>
     <!-- navbar-->
     <%- include('./../components/navbar') %>
-    <section class="super-container">                                                                       
+        <section class="super-container">
 
-        <div class="title-container">
-            <h1>BOOKING</h1>
-        </div>
-
-        <div class="flex-container">    
-            <!-- pdf container -->
-            <div class="pdf-container">
-                <h1>Menu</h1>
-                <section class="slider">
-                    <div class="slider_content" id="slider">
-                        <div class="list">
-                            <% menu_book.forEach((menu) => { %>
-                                <div class="item">
-                                    <img src="/assets/<%= menu.path %>" alt="">
-                                </div>
-                                <% }) %>
-                        </div>
-                        <div class="buttons">
-                            <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                            <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                
-                    </div>
-                </section>
-                <p><a href="/assets/menu/menu_book.pdf">Download the PDF</a></p>
+            <div class="title-container">
+                <h1>BOOKING</h1>
             </div>
 
-            <!-- order form -->
-            <form action="" class="order-container">
-                <h1>Order Details</h1>
-                <input type="date" placeholder="Date" required>
-                <input type="text" placeholder="Name" required>
-                <input type="tel" placeholder="Phone" required>
-                <input type="email" placeholder="Email" required>
-                <input type="number" placeholder="Count" min="1" required>
+            <div class="flex-container">
+                <!-- pdf container -->
+                <div class="pdf-container">
+                    <h1>Menu</h1>
+                    <section class="slider">
+                        <div class="slider_content" id="slider">
+                            <div class="list">
+                                <% menu_book.forEach((menu)=> { %>
+                                    <div class="item">
+                                        <img src="/assets/<%= menu.path %>" alt="">
+                                    </div>
+                                    <% }) %>
+                            </div>
+                            <div class="buttons">
+                                <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
 
-                <textarea placeholder="Enter your order details here..." required></textarea>
-                
-                <!-- radio button -->
-                <div class="radio-container">
-                    <div class="radio">
-                        <input type="radio" name="check" id="restaurant" checked>
-                        <label for="restaurant">Eat at restaurant</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="check" id="house">
-                        <label for="house">Take away</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="check" id="cooking">
-                        <label for="cooking">Cooking at house</label>
+                        </div>
+                    </section>
+                    <div class="pdf-d-lang">
+                        <p><a href="/assets/menu/menu_book.pdf">Download the PDF for English</a></p>
+                        <p><a href="/assets/menu/menu_book.pdf">Download the PDF for Austria</a></p>
                     </div>
                 </div>
-                <button type="submit">Order now</button>
-            </form>
-        </div>
-    </section>
-    
-    <!-- footer -->
-    <%- include('./../components/footer') %>
 
-    <script src="/js/menu-script.js"></script>
+                <!-- order form -->
+                <form action="" class="order-container">
+                    <h1>Order Details</h1>
+                    <input type="date" placeholder="Date" required>
+                    <input type="text" placeholder="Name" required>
+                    <input type="tel" placeholder="Phone" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="number" placeholder="Count" min="1" required>
+
+                    <textarea placeholder="Enter your order details here..." required></textarea>
+
+                    <!-- radio button -->
+                    <div class="radio-container">
+                        <div class="radio">
+                            <input type="radio" name="check" id="restaurant" checked>
+                            <label for="restaurant">Eat at restaurant</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="check" id="house">
+                            <label for="house">Take away</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="check" id="cooking">
+                            <label for="cooking">Cooking at house</label>
+                        </div>
+                    </div>
+                    <button type="submit">Order now</button>
+                </form>
+            </div>
+            <div class="foodora-button">
+                <p>Order in</p>
+                <a href="" class="">
+                    <img src="/assets/Foodora_Logo.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <%- include('./../components/footer') %>
+
+            <script src="/js/menu-script.js"></script>
 </body>
 
 </html>
