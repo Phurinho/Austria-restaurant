@@ -3,8 +3,10 @@
     { 
       "category": "Vorspeise",
       "menu": [
+        { "path": "menu/FrenchFires.jpg", "name": "Pommes", "price":"5,90"},
         { "path": "menu/Fruhlingsrollen.jpg", "name": "Frühlingsrollen", "price": "5,90" },
-        { "path": "menu/Gyoza.jpg", "name": "Gyoza", "price": "5,90" }
+        { "path": "menu/Gyoza.jpg", "name": "Gyoza", "price": "5,90" },
+        { "path": "menu/ChickenNugget.jpg", "name" : "Chicken Nuggets", "price" : "5,90"}
       ]
     },
     { 

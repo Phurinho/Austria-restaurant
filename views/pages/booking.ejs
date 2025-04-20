@@ -36,34 +36,34 @@
                         </div>
                     </section>
                     <div class="pdf-d-lang">
-                        <p><a href="/assets/menu/menu_book.pdf">Download the PDF for English</a></p>
-                        <p><a href="/assets/menu/menu_book.pdf">Download the PDF for Austria</a></p>
+                        <p><a href="/assets/menu/menu_English.pdf">Download the PDF for English</a></p>
+                        <p><a href="/assets/menu/menu_German.pdf">Download the PDF for German</a></p>
                     </div>
                 </div>
 
                 <!-- order form -->
-                <form action="" class="order-container">
+                <form action="" class="order-container" onsubmit="sendWhatsAppMessage(event)">
                     <h1>Order Details</h1>
-                    <input type="date" placeholder="Date" required>
-                    <input type="text" placeholder="Name" required>
-                    <input type="tel" placeholder="Phone" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="number" placeholder="Count" min="1" required>
+                    <input type="date" id="date" placeholder="Date" required>
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="tel" id="phone" placeholder="Phone" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="number" id="count" placeholder="Count" min="1" required>
 
-                    <textarea placeholder="Enter your order details here..." required></textarea>
+                    <textarea id="details" placeholder="Enter your order details here..." required></textarea>
 
                     <!-- radio button -->
                     <div class="radio-container">
                         <div class="radio">
-                            <input type="radio" name="check" id="restaurant" checked>
+                            <input type="radio" name="check" id="restaurant" value = "Eat at restaurant"checked>
                             <label for="restaurant">Eat at restaurant</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" name="check" id="house">
+                            <input type="radio" name="check" id="house" value="Take away">
                             <label for="house">Take away</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" name="check" id="cooking">
+                            <input type="radio" name="check" id="cooking" value="Cooking at house">
                             <label for="cooking">Cooking at house</label>
                         </div>
                     </div>
@@ -71,8 +71,8 @@
                 </form>
             </div>
             <div class="foodora-button">
-                <p>Order in</p>
-                <a href="" class="">
+                <p>Available in</p>
+                <a href="https://www.foodora.at/restaurant/rjxp/charm-thai" class="">
                     <img src="/assets/Foodora_Logo.png" alt="">
                 </a>
             </div>
@@ -82,6 +82,10 @@
         <%- include('./../components/footer') %>
 
             <script src="/js/menu-script.js"></script>
+
+            <!-- เชื่อมกับไฟล์ JS -->
+            <script src="/js/order.js"></script>
+
 </body>
 
 </html>
