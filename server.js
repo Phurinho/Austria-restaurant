@@ -6,19 +6,23 @@ const homeImgs = require("./database/home.json");
 const hotdealImgs = require("./database/hotdeal.json");
 const menu_book = require("./database/menu_book.json");
 const send_WhatsApp = require('./api/sendWhatsapp');
+const send_Email = require('./api/sendEmail');
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "views"));
 
 server.use(express.json());
 server.use(express.static(path.join(__dirname, "public")));
 server.use(express.urlencoded({ extended: true }))
+server.use('/api', send_Email);
+server.use('/api', send_WhatsApp);
+
 
 server.get('/', (req, res) => {
     res.render('pages/home', { homeImgs: homeImgs.HomeImgs });
 });
 
 
-server.use('/api', send_WhatsApp);
+
 // server.get('/gallery', (req, res) => {
 //     res.render('pages/gallery', { galleryImgs_1, galleryImgs_2});
 // });`
