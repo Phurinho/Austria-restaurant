@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path');
 const server = express();
-
 const allmenu = require("./database/menu.json");
 const homeImgs = require("./database/home.json");
 const hotdealImgs = require("./database/hotdeal.json");
 const menu_book = require("./database/menu_book.json");
-
+const send_WhatsApp = require('./api/sendWhatsapp');
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "views"));
 
@@ -18,6 +17,8 @@ server.get('/', (req, res) => {
     res.render('pages/home', { homeImgs: homeImgs.HomeImgs });
 });
 
+
+server.use('/api', send_WhatsApp);
 // server.get('/gallery', (req, res) => {
 //     res.render('pages/gallery', { galleryImgs_1, galleryImgs_2});
 // });`
